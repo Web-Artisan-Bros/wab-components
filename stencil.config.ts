@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'wab-form-builder',
+  globalStyle: 'src/globals/app.css',
   outputTargets: [
     {
       type: 'dist',

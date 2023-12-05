@@ -5,57 +5,86 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { WabFormSchema } from "./components/form-builder/wab-form-schema";
+export { WabFormSchema } from "./components/form-builder/wab-form-schema";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface WabFormBuilder {
+        "action": string;
+        "method": string;
+        "schema": string | WabFormSchema;
+        "useAjax": Boolean;
+    }
+    interface WabTextInput {
+        "details": string;
+        "errors": string;
+        "label": string;
+        "name": string;
+        "placeholder": string;
+        "type": string;
+        "value": string;
     }
 }
+export interface WabTextInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLWabTextInputElement;
+}
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLWabFormBuilderElement extends Components.WabFormBuilder, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLWabFormBuilderElement: {
+        prototype: HTMLWabFormBuilderElement;
+        new (): HTMLWabFormBuilderElement;
+    };
+    interface HTMLWabTextInputElementEventMap {
+        "valueChanged": string;
+    }
+    interface HTMLWabTextInputElement extends Components.WabTextInput, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLWabTextInputElementEventMap>(type: K, listener: (this: HTMLWabTextInputElement, ev: WabTextInputCustomEvent<HTMLWabTextInputElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLWabTextInputElementEventMap>(type: K, listener: (this: HTMLWabTextInputElement, ev: WabTextInputCustomEvent<HTMLWabTextInputElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLWabTextInputElement: {
+        prototype: HTMLWabTextInputElement;
+        new (): HTMLWabTextInputElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "wab-form-builder": HTMLWabFormBuilderElement;
+        "wab-text-input": HTMLWabTextInputElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface WabFormBuilder {
+        "action"?: string;
+        "method"?: string;
+        "schema"?: string | WabFormSchema;
+        "useAjax"?: Boolean;
+    }
+    interface WabTextInput {
+        "details"?: string;
+        "errors"?: string;
+        "label"?: string;
+        "name": string;
+        "onValueChanged"?: (event: WabTextInputCustomEvent<string>) => void;
+        "placeholder"?: string;
+        "type"?: string;
+        "value"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "wab-form-builder": WabFormBuilder;
+        "wab-text-input": WabTextInput;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "wab-form-builder": LocalJSX.WabFormBuilder & JSXBase.HTMLAttributes<HTMLWabFormBuilderElement>;
+            "wab-text-input": LocalJSX.WabTextInput & JSXBase.HTMLAttributes<HTMLWabTextInputElement>;
         }
     }
 }

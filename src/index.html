@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/wab-form-builder.esm.js"></script>
-    <script nomodule src="/build/wab-form-builder.js"></script>
-  </head>
-  <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/wab-form-builder.esm.js"></script>
+  <script nomodule src="/build/wab-form-builder.js"></script>
+  <link rel="stylesheet" href="/build/wab-form-builder.css" />
+</head>
+
+<body>
+
+  <!-- <wab-text-input value="red" name="name" label="Nome" placeholder="Inserisci il tuo nome"
+                  details="fai qualcosa di carino"
+                  errors="qualcosa è andato storto">
+    <div slot="details">ciao come va?</div>
+  </wab-text-input> -->
+
+
+
+  <wab-form-builder id="form-builder">
+    <input type="hidden" name="csrf" value="86as87a68d6asd8">
+  </wab-form-builder>
+
+  <script>
+
+    const formSchema = {
+      "fields": [
+        {
+          "type": "text",
+          "name": "nome",
+          "label": "Nome",
+          validators: (yup) => yup.string().defined(),
+        },
+        {
+          "type": "text",
+          "name": "cognome",
+          "label": "Cognome",
+          validators: (yup) => yup.string().required(),
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Email",
+          validators: (yup) => yup.string().defined().email().required(),
+        }
+      ]
+    };
+
+    document.getElementById('form-builder').schema = formSchema
+  </script>
+</body>
+
 </html>
