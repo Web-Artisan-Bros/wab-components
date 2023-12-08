@@ -7,8 +7,9 @@ import { Component, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 })
 export class TextInput {
   @Prop({ mutable: true }) value: string;
-  @Prop() placeholder: string = 'text';
-  @Prop() type: string;
+  @Prop() placeholder: string;
+  @Prop() type: string = 'text';
+  @Prop() disabled: boolean = false;
   @Prop() name!: string;
   @Prop() label: string;
   @Prop() details: string;
@@ -24,6 +25,9 @@ export class TextInput {
     this.value = e.target['value'];
     this.valueChanged.emit(e.target['value']);
   }
+  componentWillLoad() {
+    // console.log(this.disabled);
+  }
 
   render() {
     return (
@@ -35,8 +39,14 @@ export class TextInput {
             </label>
           )}
         </slot>
-
-        <input part="input" type={this.placeholder} placeholder={this.placeholder} value={this.value} id={this.id} onInput={e => this.valueChangedHandler(e)} />
+        
+        <input part='input'
+               type={this.type}
+               placeholder={this.placeholder}
+               value={this.value}
+               id={this.id}
+               disabled={this.disabled}
+               onInput={e => this.valueChangedHandler(e)} />
 
         <slot name="details">{this.details && <div part="details">{this.details}</div>}</slot>
 

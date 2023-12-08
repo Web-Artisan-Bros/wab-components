@@ -62,11 +62,23 @@ export class FormBuilder {
 
   @Watch('schema')
   onSchemaChange(newValue: string | WabFormSchema) {
-    if (typeof newValue === 'string') {
-      this.formSchema = JSON.parse(newValue);
-    } else {
-      this.formSchema = newValue;
+    if (!newValue) {
+      throw new Error('You must provide a schema to the form');
     }
+    
+    let schema: WabFormSchema;
+    
+    if (typeof newValue === 'string') {
+      schema = JSON.parse(newValue);
+    } else {
+      schema = newValue;
+    }
+    
+    schema.fields.map(field => {
+      field.id = (field.id || field.name) + '_' + Math.random().toString(36).substring(2, 9);
+    });
+    
+    this.formSchema = schema;
   }
 
   resetValidationErrors() {
@@ -94,9 +106,11 @@ export class FormBuilder {
 
   componentWillLoad() {
     this.onSchemaChange(this.schema);
+    
+    // console.log(this.schema);
 
     // Assign initial values to formData
-    this.initialValues = this.formSchema?.fields.reduce((acc, field) => ({ ...acc, [field.name]: '' }), {});
+    this.initialValues = this.formSchema?.fields.reduce((acc, field) => ({ ...acc, [field.name]: field.value ?? '' }), {});
     this.formData = { ...this.initialValues };
 
     // Create the validator schema
@@ -118,17 +132,29 @@ export class FormBuilder {
       ...this.formData,
       [field.name]: value,
     };
-
-    console.log(this.formData);
   }
-
+  
+  /**
+   * Get the right component for the field based on its type
+   * @param field
+   */
   getRightComponent(field: WabFormSchemaField) {
     switch (field.type) {
       case 'text':
       case 'email':
       case 'password':
+        const condition = field.hasOwnProperty('conditions') ? field.conditions(this.formData) : true;
+        
+        // If the field is not visible, return null and reset its value
+        if (!condition) {
+          // Reset the value of the field
+          this.formData[field.name] = '';
+          
+          return null;
+        }
+        
         return (
-          <wab-text-input
+          <wab-text-input key={field.id}
             {...field}
             value={this.formData[field.name]}
             onKeyUp={e => e.key === 'Enter' && this.formEl.requestSubmit()}

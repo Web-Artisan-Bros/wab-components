@@ -1,15 +1,16 @@
 import * as yupContent from 'yup';
 
 export interface WabFormSchemaField {
+  id?: string;
   name: string;
   label: string;
   type: string;
+  placeholder?: string;
   options?: string[];
-  required?: boolean;
   value?: any;
   disabled?: boolean;
-  visible?: boolean;
   validators?: (yup, yupSchema: yupContent.Schema) => yupContent.StringSchema;
+  conditions?: (formData: any) => boolean;
   errors?: string;
   details?: string;
 
