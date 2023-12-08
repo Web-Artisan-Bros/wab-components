@@ -5,14 +5,17 @@ describe('text-input', () => {
   it('renders', async () => {
     const page = await newSpecPage({
       components: [TextInput],
-      html: `<text-input></text-input>`,
+      html: `<wab-text-input></wab-text-input>`,
     });
     expect(page.root).toEqualHtml(`
-      <text-input>
+      <wab-text-input class='wab-form-input-wrapper'>
         <mock:shadow-root>
-          <slot></slot>
+           <slot name='label'></slot>
+           <input id='wab-text-input' part='input' type='text'>
+           <slot name='details'></slot>
+           <slot name='errors'></slot>
         </mock:shadow-root>
-      </text-input>
+      </wab-text-input>
     `);
   });
 });

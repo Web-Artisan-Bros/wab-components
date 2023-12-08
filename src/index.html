@@ -27,24 +27,36 @@
 
   <script>
 
+    /**
+     *
+     * @type {import('./components/form-builder/wab-form-schema').WabFormSchema}
+     */
     const formSchema = {
       "fields": [
         {
           "type": "text",
           "name": "nome",
           "label": "Nome",
+          'placeholder': 'Inserisci il tuo nome',
+          disabled: true,
+          'conditions': (formData) => formData.cognome === 'ciao',
           validators: (yup) => yup.string().defined(),
+
         },
         {
           "type": "text",
           "name": "cognome",
           "label": "Cognome",
+          'placeholder': 'Inserisci il tuo cognome',
+          'disabled': true,
+          value: 'ciao',
           validators: (yup) => yup.string().required(),
         },
         {
           "type": "email",
           "name": "email",
           "label": "Email",
+          details: 'Inserisci la tua email',
           validators: (yup) => yup.string().defined().email().required(),
         }
       ]

@@ -16,6 +16,7 @@ export namespace Components {
     }
     interface WabTextInput {
         "details": string;
+        "disabled": boolean;
         "errors": string;
         "label": string;
         "name": string;
@@ -66,6 +67,7 @@ declare namespace LocalJSX {
     }
     interface WabTextInput {
         "details"?: string;
+        "disabled"?: boolean;
         "errors"?: string;
         "label"?: string;
         "name": string;
