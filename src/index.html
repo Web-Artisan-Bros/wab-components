@@ -41,14 +41,13 @@
           disabled: true,
           'conditions': (formData) => formData.cognome === 'ciao',
           validators: (yup) => yup.string().defined(),
-
         },
         {
           "type": "text",
           "name": "cognome",
           "label": "Cognome",
           'placeholder': 'Inserisci il tuo cognome',
-          'disabled': true,
+          'readonly': true,
           value: 'ciao',
           validators: (yup) => yup.string().required(),
         },
@@ -56,8 +55,18 @@
           "type": "email",
           "name": "email",
           "label": "Email",
+          // disabled: (formData) => !formData?.hasEmail,
+          conditions: (formData) => formData?.hasEmail,
           details: 'Inserisci la tua email',
-          validators: (yup) => yup.string().defined().email().required(),
+          validators: (yup) => yup.string().email().required(),
+        },
+        {
+          "type": "checkbox",
+          "name": "hasEmail",
+          "label": "Permetti Email",
+          details: 'Inserisci la tua email',
+          "checked" : true,
+          "value": "si"
         }
       ]
     };

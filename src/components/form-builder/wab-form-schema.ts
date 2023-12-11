@@ -6,9 +6,14 @@ export interface WabFormSchemaField {
   label: string;
   type: string;
   placeholder?: string;
+  /**
+   * Only for select
+   */
   options?: string[];
   value?: any;
-  disabled?: boolean;
+  checked?: any;
+  disabled?: boolean | ((formData: any) => boolean);
+  readonly?: boolean | ((formData: any) => boolean);
   validators?: (yup, yupSchema: yupContent.Schema) => yupContent.StringSchema;
   conditions?: (formData: any) => boolean;
   errors?: string;

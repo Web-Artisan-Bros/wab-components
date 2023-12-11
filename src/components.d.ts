@@ -8,6 +8,16 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { WabFormSchema } from "./components/form-builder/wab-form-schema";
 export { WabFormSchema } from "./components/form-builder/wab-form-schema";
 export namespace Components {
+    interface WabCheckboxInput {
+        "checked": boolean;
+        "details": string;
+        "disabled": boolean;
+        "errors": string;
+        "label": string;
+        "name": string;
+        "readonly": boolean;
+        "value": string;
+    }
     interface WabFormBuilder {
         "action": string;
         "method": string;
@@ -21,15 +31,37 @@ export namespace Components {
         "label": string;
         "name": string;
         "placeholder": string;
+        "readonly": boolean;
         "type": string;
         "value": string;
     }
+}
+export interface WabCheckboxInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLWabCheckboxInputElement;
 }
 export interface WabTextInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLWabTextInputElement;
 }
 declare global {
+    interface HTMLWabCheckboxInputElementEventMap {
+        "valueChanged": string;
+    }
+    interface HTMLWabCheckboxInputElement extends Components.WabCheckboxInput, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLWabCheckboxInputElementEventMap>(type: K, listener: (this: HTMLWabCheckboxInputElement, ev: WabCheckboxInputCustomEvent<HTMLWabCheckboxInputElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLWabCheckboxInputElementEventMap>(type: K, listener: (this: HTMLWabCheckboxInputElement, ev: WabCheckboxInputCustomEvent<HTMLWabCheckboxInputElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLWabCheckboxInputElement: {
+        prototype: HTMLWabCheckboxInputElement;
+        new (): HTMLWabCheckboxInputElement;
+    };
     interface HTMLWabFormBuilderElement extends Components.WabFormBuilder, HTMLStencilElement {
     }
     var HTMLWabFormBuilderElement: {
@@ -54,11 +86,23 @@ declare global {
         new (): HTMLWabTextInputElement;
     };
     interface HTMLElementTagNameMap {
+        "wab-checkbox-input": HTMLWabCheckboxInputElement;
         "wab-form-builder": HTMLWabFormBuilderElement;
         "wab-text-input": HTMLWabTextInputElement;
     }
 }
 declare namespace LocalJSX {
+    interface WabCheckboxInput {
+        "checked"?: boolean;
+        "details"?: string;
+        "disabled"?: boolean;
+        "errors"?: string;
+        "label"?: string;
+        "name": string;
+        "onValueChanged"?: (event: WabCheckboxInputCustomEvent<string>) => void;
+        "readonly"?: boolean;
+        "value"?: string;
+    }
     interface WabFormBuilder {
         "action"?: string;
         "method"?: string;
@@ -73,10 +117,12 @@ declare namespace LocalJSX {
         "name": string;
         "onValueChanged"?: (event: WabTextInputCustomEvent<string>) => void;
         "placeholder"?: string;
+        "readonly"?: boolean;
         "type"?: string;
         "value"?: string;
     }
     interface IntrinsicElements {
+        "wab-checkbox-input": WabCheckboxInput;
         "wab-form-builder": WabFormBuilder;
         "wab-text-input": WabTextInput;
     }
@@ -85,6 +131,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "wab-checkbox-input": LocalJSX.WabCheckboxInput & JSXBase.HTMLAttributes<HTMLWabCheckboxInputElement>;
             "wab-form-builder": LocalJSX.WabFormBuilder & JSXBase.HTMLAttributes<HTMLWabFormBuilderElement>;
             "wab-text-input": LocalJSX.WabTextInput & JSXBase.HTMLAttributes<HTMLWabTextInputElement>;
         }

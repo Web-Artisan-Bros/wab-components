@@ -1,15 +1,18 @@
 import { Component, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
+import { getComponentId } from '../../../utils/utils';
+import FormComponentInterface from '../../../interfaces/FormComponentInterface';
 
 @Component({
   tag: 'wab-text-input',
   styleUrl: 'text-input.css',
   shadow: true,
 })
-export class TextInput {
+export class TextInput implements FormComponentInterface {
   @Prop({ mutable: true }) value: string;
   @Prop() placeholder: string;
   @Prop() type: string = 'text';
   @Prop() disabled: boolean = false;
+  @Prop() readonly: boolean = false;
   @Prop() name!: string;
   @Prop() label: string;
   @Prop() details: string;
@@ -18,7 +21,7 @@ export class TextInput {
   @Event() valueChanged: EventEmitter<string>;
 
   get id() {
-    return 'wab-' + (this.name ? this.name + '-' : '') + 'text-input';
+    return getComponentId(this.name);
   }
 
   valueChangedHandler(e: InputEvent) {
@@ -46,6 +49,7 @@ export class TextInput {
                value={this.value}
                id={this.id}
                disabled={this.disabled}
+               readonly={this.readonly}
                onInput={e => this.valueChangedHandler(e)} />
 
         <slot name="details">{this.details && <div part="details">{this.details}</div>}</slot>
@@ -54,4 +58,5 @@ export class TextInput {
       </Host>
     );
   }
+  
 }
