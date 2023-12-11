@@ -11,7 +11,7 @@ describe('text-input', () => {
       <wab-text-input class='wab-form-input-wrapper'>
         <mock:shadow-root>
            <slot name='label'></slot>
-           <input id='wab-text-input' part='input' type='text'>
+           <input id='wab-form-input' part='input' type='text'>
            <slot name='details'></slot>
            <slot name='errors'></slot>
         </mock:shadow-root>

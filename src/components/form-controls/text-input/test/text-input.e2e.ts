@@ -16,7 +16,7 @@ describe('text-input', () => {
     
     expect(elm.shadowRoot).toEqualHtml(`
       <slot name='label'></slot>
-      <input part='input' type='text' id='wab-text-input'>
+      <input part='input' type='text' id='wab-form-input'>
       <slot name='details'></slot>
       <slot name='errors'></slot>
     `);

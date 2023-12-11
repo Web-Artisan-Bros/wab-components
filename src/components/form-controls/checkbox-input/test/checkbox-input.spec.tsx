@@ -5,14 +5,17 @@ describe('checkbox-input', () => {
   it('renders', async () => {
     const page = await newSpecPage({
       components: [CheckboxInput],
-      html: `<checkbox-input></checkbox-input>`,
+      html: `<wab-checkbox-input></wab-checkbox-input>`,
     });
     expect(page.root).toEqualHtml(`
-      <checkbox-input>
+      <wab-checkbox-input class='wab-form-input-wrapper'>
         <mock:shadow-root>
-          <slot></slot>
+          <slot name='label'></slot>
+          <input id='wab-form-input' part='input' type='checkbox'>
+          <slot name='details'></slot>
+          <slot name='errors'></slot>
         </mock:shadow-root>
-      </checkbox-input>
+      </wab-checkbox-input>
     `);
   });
 });
