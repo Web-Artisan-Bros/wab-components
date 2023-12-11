@@ -17,7 +17,8 @@ export class CheckboxInput implements FormComponentInterface {
   @Prop() details: string;
   @Prop() errors: string;
   
-  @Event() valueChanged: EventEmitter<string>;
+  @Event() valueChange: EventEmitter<string>;
+  @Event() valueInput: EventEmitter<string>;
   
   get id () {
     return getComponentId(this.name);
@@ -25,7 +26,7 @@ export class CheckboxInput implements FormComponentInterface {
   
   valueChangedHandler (e: InputEvent) {
     this.checked = e.target['checked'];
-    this.valueChanged.emit(e.target['checked']);
+    this.valueInput.emit(e.target['checked']);
   }
   
   componentWillLoad () {

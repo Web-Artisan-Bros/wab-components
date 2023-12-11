@@ -46,7 +46,8 @@ export interface WabTextInputCustomEvent<T> extends CustomEvent<T> {
 }
 declare global {
     interface HTMLWabCheckboxInputElementEventMap {
-        "valueChanged": string;
+        "valueChange": string;
+        "valueInput": string;
     }
     interface HTMLWabCheckboxInputElement extends Components.WabCheckboxInput, HTMLStencilElement {
         addEventListener<K extends keyof HTMLWabCheckboxInputElementEventMap>(type: K, listener: (this: HTMLWabCheckboxInputElement, ev: WabCheckboxInputCustomEvent<HTMLWabCheckboxInputElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
@@ -69,7 +70,8 @@ declare global {
         new (): HTMLWabFormBuilderElement;
     };
     interface HTMLWabTextInputElementEventMap {
-        "valueChanged": string;
+        "valueChange": string;
+        "valueInput": string;
     }
     interface HTMLWabTextInputElement extends Components.WabTextInput, HTMLStencilElement {
         addEventListener<K extends keyof HTMLWabTextInputElementEventMap>(type: K, listener: (this: HTMLWabTextInputElement, ev: WabTextInputCustomEvent<HTMLWabTextInputElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
@@ -99,7 +101,14 @@ declare namespace LocalJSX {
         "errors"?: string;
         "label"?: string;
         "name": string;
-        "onValueChanged"?: (event: WabCheckboxInputCustomEvent<string>) => void;
+        /**
+          * Fired when the value of the input changes, usually on change event
+         */
+        "onValueChange"?: (event: WabCheckboxInputCustomEvent<string>) => void;
+        /**
+          * Fired when the value of the input changes, usually on input event keyUp
+         */
+        "onValueInput"?: (event: WabCheckboxInputCustomEvent<string>) => void;
         "readonly"?: boolean;
         "value"?: string;
     }
@@ -115,7 +124,14 @@ declare namespace LocalJSX {
         "errors"?: string;
         "label"?: string;
         "name": string;
-        "onValueChanged"?: (event: WabTextInputCustomEvent<string>) => void;
+        /**
+          * Fired when the value of the input changes, usually on change event
+         */
+        "onValueChange"?: (event: WabTextInputCustomEvent<string>) => void;
+        /**
+          * Fired when the value of the input changes, usually on input event keyUp
+         */
+        "onValueInput"?: (event: WabTextInputCustomEvent<string>) => void;
         "placeholder"?: string;
         "readonly"?: boolean;
         "type"?: string;

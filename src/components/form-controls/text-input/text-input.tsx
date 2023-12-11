@@ -17,8 +17,9 @@ export class TextInput implements FormComponentInterface {
   @Prop() label: string;
   @Prop() details: string;
   @Prop() errors: string;
-
-  @Event() valueChanged: EventEmitter<string>;
+  
+  @Event() valueChange: EventEmitter<string>;
+  @Event() valueInput: EventEmitter<string>;
 
   get id() {
     return getComponentId(this.name);
@@ -26,7 +27,7 @@ export class TextInput implements FormComponentInterface {
 
   valueChangedHandler(e: InputEvent) {
     this.value = e.target['value'];
-    this.valueChanged.emit(e.target['value']);
+    this.valueInput.emit(e.target['value']);
   }
   componentWillLoad() {
     // console.log(this.disabled);
@@ -50,7 +51,8 @@ export class TextInput implements FormComponentInterface {
                id={this.id}
                disabled={this.disabled}
                readonly={this.readonly}
-               onInput={e => this.valueChangedHandler(e)} />
+               onInput={e => this.valueChangedHandler(e)}
+               onChange={e => this.valueChange.emit(e.target['value'])} />
 
         <slot name="details">{this.details && <div part="details">{this.details}</div>}</slot>
 

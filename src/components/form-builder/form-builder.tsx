@@ -51,19 +51,28 @@ export class FormBuilder implements ComponentInterface {
       });
       
       slottedInputs.forEach(input => (dataToSubmit[input.name] = input.value));
-
+      
       // Validate form
       await this.formValidator.validate(dataToSubmit, {
         abortEarly: false,
+        // context: this.formData,
       });
+      
+      this.invokeEventFn('onBeforeSubmit', dataToSubmit);
       
       if (!this.useAjax) {
         this.submitFakeForm(dataToSubmit);
+      } else {
+        this.invokeEventFn('onSubmit', dataToSubmit);
       }
+      
+      this.invokeEventFn('onAfterSubmit', dataToSubmit);
     } catch (e) {
       if (e.name === 'ValidationError') {
         this.storeValidationErrors(e);
       }
+      
+      this.invokeEventFn('onSubmitError', e);
     }
   }
   
@@ -75,10 +84,12 @@ export class FormBuilder implements ComponentInterface {
   onReset (e: Event) {
     e.preventDefault();
     
-    this.formData = { ...this.initialValues };
-    console.log(this.formData);
+    this.invokeEventFn('onBeforeReset', this.formData);
     
+    this.formData = { ...this.initialValues };
     this.resetValidationErrors();
+    
+    this.invokeEventFn('onAfterReset', this.formData);
   }
   
   /**
@@ -100,7 +111,7 @@ export class FormBuilder implements ComponentInterface {
     if (typeof newValue === 'string') {
       // ensure the schema is a valid JSON
       try {
-      schema = JSON.parse(newValue);
+        schema = JSON.parse(newValue);
       } catch (e) {
         throw new Error('The schema is not a valid JSON');
       }
@@ -127,29 +138,41 @@ export class FormBuilder implements ComponentInterface {
   }
   
   /**
-   * Event handler for the input value change
+   * Event handler for the input value change. This will be on keyup for text inputs
    *
    * @param {WabFormSchemaField} field
    * @param {any} value
    */
-  onInputValueChange (field: WabFormSchemaField, value: any) {
+  async onInputValueChange (field: WabFormSchemaField, value: any) {
     // TODO:: Handle lazy validation
     
     this.formData = {
       ...this.formData,
       [field.name]: value,
     };
+    
+    // If the field is not lazy, validate it immediately
+    if (!this.formSchema.lazy) {
+      await this.validateSingleField(field);
+    }
   }
   
   /**
    * Reset the validation errors by resetting the form validator
    * and setting to undefined each field's "errors" property
+   *
+   * @param {WabFormSchemaField} field
    */
-  resetValidationErrors () {
+  resetValidationErrors (field?: WabFormSchemaField) {
     const newFormSchema = { ...this.formSchema };
     
-    // reset the form validator
-    newFormSchema.fields.forEach(field => (field.errors = undefined));
+    // If a field is provided, reset only its "errors" property
+    if (field) {
+      this.setFieldErrors(newFormSchema, field.name, undefined);
+    } else {
+      // reset the form validator
+      newFormSchema.fields.forEach(field => (field.errors = undefined));
+    }
     
     this.formSchema = newFormSchema;
   }
@@ -162,18 +185,47 @@ export class FormBuilder implements ComponentInterface {
    */
   storeValidationErrors (e: yup.ValidationError) {
     const newSchema = { ...this.formSchema };
+    const errors: { field: string, error: string }[] = [];
     
-    // for each error, find the corresponding field and set its "errors" property
-    e.inner.forEach((err: yup.ValidationError) => {
-      const field = newSchema.fields.find(field => field.name === err.path);
-      
-      // If the field is found, set its "errors" property
-      if (field) {
-        field.errors = err.message;
-      }
+    // If the error has inner errors, it means there are multiple errors
+    if (e.inner.length) {
+      // for each error, find the corresponding field and set its "errors" property
+      e.inner.forEach((err: yup.ValidationError) => {
+        errors.push({
+          field: err.path,
+          error: err.message,
+        });
+      });
+    } else {
+      errors.push({
+        field: e.path,
+        error: e.message,
+      });
+    }
+    
+    errors.forEach(err => {
+      this.setFieldErrors(newSchema, err.field, err.error);
     });
     
     this.formSchema = newSchema;
+    
+    this.invokeEventFn('onValidationErrors', this.formData, e);
+  }
+  
+  /**
+   * Set the "errors" property of a field
+   *
+   * @param schema
+   * @param fieldName
+   * @param error
+   */
+  setFieldErrors (schema: WabFormSchema, fieldName: string, error: string) {
+    const field = schema.fields.find(field => field.name === fieldName);
+    
+    // If the field is found, set its "errors" property
+    if (field) {
+      field.errors = error;
+    }
   }
   
   /**
@@ -247,6 +299,18 @@ export class FormBuilder implements ComponentInterface {
     };
   }
   
+  async validateSingleField (field: WabFormSchemaField) {
+    this.resetValidationErrors(field);
+    
+    try {
+      await this.formValidator.validateAt(field.name, this.formData);
+    } catch (e) {
+      if (e.name === 'ValidationError') {
+        this.storeValidationErrors(e);
+      }
+    }
+  }
+  
   /**
    * Create a fake form and submit it
    * Use only if "useAjax" is false
@@ -272,6 +336,12 @@ export class FormBuilder implements ComponentInterface {
     form.submit();
   }
   
+  invokeEventFn (name: string, ...args: any) {
+    if (this.formSchema.hasOwnProperty(name)) {
+      this.formSchema[name](...args);
+    }
+  }
+  
   /**
    * Get the right component for the field based on its type
    *
@@ -293,10 +363,13 @@ export class FormBuilder implements ComponentInterface {
       key: field.id,
       disabled: disabled,
       readonly: readonly,
-      onValueChange: (e: {
-        detail: any;
-      }) => this.onInputValueChange(field, e.detail),
+      onValueInput: (e: CustomEvent) => this.onInputValueChange(field, e.detail),
     };
+    
+    // If the form is lazy, add the onValueChange event handler to trigger the validation of the field
+    if (this.formSchema.lazy) {
+      props['onValueChange'] = () => this.validateSingleField(field);
+    }
     
     switch (field.type) {
       case 'text':

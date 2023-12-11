@@ -1,4 +1,5 @@
 import * as yupContent from 'yup';
+import { ValidationError } from 'yup';
 
 export interface WabFormSchemaField {
   id?: string;
@@ -6,6 +7,7 @@ export interface WabFormSchemaField {
   label: string;
   type: string;
   placeholder?: string;
+  
   /**
    * Only for select
    */
@@ -26,7 +28,29 @@ export interface WabFormSchemaField {
 }
 
 export interface WabFormSchema {
+  // Options
+  
+  /**
+   * If true, the form will be validated on change event instead on input event
+   */
   lazy?: boolean;
+  
+  /**
+   * If true, the form will be submitted using ajax instead of the default form submit
+   */
   useAjax?: boolean;
+  
+  // fields schema
   fields: WabFormSchemaField[];
+  
+  // Events
+  onBeforeSubmit?: (formData: any) => void;
+  onSubmit?: (formData: any) => void;
+  onAfterSubmit?: (formData: any) => void;
+  onSubmitError?: (formData: any) => void;
+  
+  onBeforeReset?: (formData: any) => void;
+  onAfterReset?: (formData: any) => void;
+  
+  onValidationErrors?: (formData: any, e: ValidationError) => void;
 }

@@ -32,15 +32,15 @@
      * @type {import('./components/form-builder/wab-form-schema').WabFormSchema}
      */
     const formSchema = {
+      lazy: true,
       "fields": [
         {
           "type": "text",
           "name": "nome",
           "label": "Nome",
-          'placeholder': 'Inserisci il tuo nome',
-          disabled: true,
+          'placeholder': 'Inserisci il tuo nomeeeee',
           'conditions': (formData) => formData.cognome === 'ciao',
-          validators: (yup) => yup.string().defined(),
+          validators: (yup) => yup.string().defined().min(4),
         },
         {
           "type": "text",
