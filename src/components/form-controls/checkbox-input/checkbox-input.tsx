@@ -24,9 +24,14 @@ export class CheckboxInput implements FormComponentInterface {
     return getComponentId(this.name);
   }
   
-  valueChangedHandler (e: InputEvent) {
+  valueChangedHandler (e: InputEvent | Event, eventToEmit?: string) {
     this.checked = e.target['checked'];
-    this.valueInput.emit(e.target['checked']);
+    
+    if (eventToEmit === 'change') {
+      this.valueChange.emit(e.target['checked']);
+    } else {
+      this.valueInput.emit(e.target['checked']);
+    }
   }
   
   componentWillLoad () {
@@ -50,7 +55,9 @@ export class CheckboxInput implements FormComponentInterface {
                id={this.id}
                disabled={this.disabled}
                value={this.value}
-               onInput={e => this.valueChangedHandler(e)} />
+               onInput={e => this.valueChangedHandler(e)}
+               onChange={e => this.valueChangedHandler(e, 'change')}
+        />
         
         <slot name='details'>{this.details && <div part='details'>{this.details}</div>}</slot>
         

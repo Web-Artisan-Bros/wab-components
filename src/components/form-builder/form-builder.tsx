@@ -1,4 +1,4 @@
-import { Component, Element, Host, Prop, State, Watch, h, ComponentInterface, JSX } from '@stencil/core';
+import { Component, Element, Host, Prop, State, Watch, h, ComponentInterface, JSX, Method } from '@stencil/core';
 import { WabFormSchema, WabFormSchemaField } from './wab-form-schema';
 import * as yup from 'yup';
 
@@ -12,10 +12,11 @@ export class FormBuilder implements ComponentInterface {
   @Prop() method: string;
   @Prop() useAjax: Boolean = false;
   @Prop() schema: string | WabFormSchema;
+  @Prop({ mutable: true }) loading: boolean = false;
   
-  @State() formData;
+  @State() formData: any;
   @State() formSchema: WabFormSchema;
-  @State() formValidator: yup.Schema<any>;
+  @State() formValidator: yup.Schema;
   
   @Element() el: HTMLElement;
   
@@ -55,25 +56,29 @@ export class FormBuilder implements ComponentInterface {
       // Validate form
       await this.formValidator.validate(dataToSubmit, {
         abortEarly: false,
-        // context: this.formData,
       });
       
-      this.invokeEventFn('onBeforeSubmit', dataToSubmit);
+      this.loading = true;
       
-      if (!this.useAjax) {
+      console.log('onbeforesubmit');
+      await this.invokeEventFn('onBeforeSubmit', dataToSubmit);
+      
+      if (!this.formSchema.useAjax) {
         this.submitFakeForm(dataToSubmit);
       } else {
-        this.invokeEventFn('onSubmit', dataToSubmit);
+        await this.invokeEventFn('onSubmit', dataToSubmit);
       }
-      
-      this.invokeEventFn('onAfterSubmit', dataToSubmit);
+      console.log('after submit');
+      await this.invokeEventFn('onAfterSubmit', dataToSubmit);
     } catch (e) {
       if (e.name === 'ValidationError') {
-        this.storeValidationErrors(e);
+        await this.storeValidationErrors(e);
       }
       
-      this.invokeEventFn('onSubmitError', e);
+      await this.invokeEventFn('onSubmitError', e);
     }
+    
+    this.loading = false;
   }
   
   /**
@@ -81,15 +86,15 @@ export class FormBuilder implements ComponentInterface {
    *
    * @param {Event} e
    */
-  onReset (e: Event) {
+  async onReset (e: Event) {
     e.preventDefault();
     
-    this.invokeEventFn('onBeforeReset', this.formData);
+    await this.invokeEventFn('onBeforeReset', this.formData);
     
     this.formData = { ...this.initialValues };
     this.resetValidationErrors();
     
-    this.invokeEventFn('onAfterReset', this.formData);
+    await this.invokeEventFn('onAfterReset', this.formData);
   }
   
   /**
@@ -137,6 +142,11 @@ export class FormBuilder implements ComponentInterface {
     this.buildValidatorSchema();
   }
   
+  @Method()
+  async getFormData () {
+    return this.formData;
+  }
+  
   /**
    * Event handler for the input value change. This will be on keyup for text inputs
    *
@@ -144,8 +154,6 @@ export class FormBuilder implements ComponentInterface {
    * @param {any} value
    */
   async onInputValueChange (field: WabFormSchemaField, value: any) {
-    // TODO:: Handle lazy validation
-    
     this.formData = {
       ...this.formData,
       [field.name]: value,
@@ -183,7 +191,7 @@ export class FormBuilder implements ComponentInterface {
    *
    * @param {yup.ValidationError} e
    */
-  storeValidationErrors (e: yup.ValidationError) {
+  async storeValidationErrors (e: yup.ValidationError) {
     const newSchema = { ...this.formSchema };
     const errors: { field: string, error: string }[] = [];
     
@@ -209,7 +217,7 @@ export class FormBuilder implements ComponentInterface {
     
     this.formSchema = newSchema;
     
-    this.invokeEventFn('onValidationErrors', this.formData, e);
+    await this.invokeEventFn('onValidationErrors', this.formData, e);
   }
   
   /**
@@ -306,7 +314,7 @@ export class FormBuilder implements ComponentInterface {
       await this.formValidator.validateAt(field.name, this.formData);
     } catch (e) {
       if (e.name === 'ValidationError') {
-        this.storeValidationErrors(e);
+        await this.storeValidationErrors(e);
       }
     }
   }
@@ -336,10 +344,12 @@ export class FormBuilder implements ComponentInterface {
     form.submit();
   }
   
-  invokeEventFn (name: string, ...args: any) {
+  async invokeEventFn (name: string, ...args: any): Promise<void> {
     if (this.formSchema.hasOwnProperty(name)) {
-      this.formSchema[name](...args);
+      return this.formSchema[name](...args);
     }
+    
+    return Promise.resolve();
   }
   
   /**
@@ -420,8 +430,11 @@ export class FormBuilder implements ComponentInterface {
    */
   render () {
     return (
-      <Host>
-        <form action={this.action} method={this.method} ref={el => (this.formEl = el)} onSubmit={e => this.onSubmit(e)}
+      <Host class={{ 'loading': this.loading }}>
+        <form action={this.action}
+              method={this.method}
+              ref={el => (this.formEl = el)}
+              onSubmit={e => this.onSubmit(e)}
               onReset={e => this.onReset(e)}>
           {/* Custom inputs. Usually hidden ones */}
           <slot></slot>
@@ -429,10 +442,10 @@ export class FormBuilder implements ComponentInterface {
           {this.formSchema?.fields.map(field => this.getRightComponent(field))}
           
           <slot name='actions'>
-            <button type='reset' part='resetBtn'>
+            <button type='reset' part='resetBtn' disabled={this.loading}>
               Reset
             </button>
-            <button type='submit' part='submitBtn'>
+            <button type='submit' part='submitBtn' disabled={this.loading}>
               Submit
             </button>
           </slot>

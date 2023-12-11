@@ -44,13 +44,13 @@ export interface WabFormSchema {
   fields: WabFormSchemaField[];
   
   // Events
-  onBeforeSubmit?: (formData: any) => void;
-  onSubmit?: (formData: any) => void;
-  onAfterSubmit?: (formData: any) => void;
-  onSubmitError?: (formData: any) => void;
+  onBeforeSubmit?: (formData: any) => Promise<void>;
+  onSubmit?: (formData: any) => Promise<void>;
+  onAfterSubmit?: (formData: any) => Promise<void>;
+  onSubmitError?: (formData: any) => Promise<void>;
   
-  onBeforeReset?: (formData: any) => void;
-  onAfterReset?: (formData: any) => void;
+  onBeforeReset?: (formData: any) => Promise<void>;
+  onAfterReset?: (formData: any) => Promise<void>;
   
   onValidationErrors?: (formData: any, e: ValidationError) => void;
 }

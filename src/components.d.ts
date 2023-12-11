@@ -20,6 +20,8 @@ export namespace Components {
     }
     interface WabFormBuilder {
         "action": string;
+        "getFormData": () => Promise<any>;
+        "loading": boolean;
         "method": string;
         "schema": string | WabFormSchema;
         "useAjax": Boolean;
@@ -114,6 +116,7 @@ declare namespace LocalJSX {
     }
     interface WabFormBuilder {
         "action"?: string;
+        "loading"?: boolean;
         "method"?: string;
         "schema"?: string | WabFormSchema;
         "useAjax"?: Boolean;

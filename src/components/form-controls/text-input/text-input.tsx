@@ -24,10 +24,15 @@ export class TextInput implements FormComponentInterface {
   get id() {
     return getComponentId(this.name);
   }
-
-  valueChangedHandler(e: InputEvent) {
+  
+  valueChangedHandler (e: InputEvent | Event, eventToEmit?: string) {
     this.value = e.target['value'];
-    this.valueInput.emit(e.target['value']);
+    
+    if (eventToEmit === 'change') {
+      this.valueChange.emit(e.target['value']);
+    } else {
+      this.valueInput.emit(e.target['value']);
+    }
   }
   componentWillLoad() {
     // console.log(this.disabled);
@@ -52,7 +57,7 @@ export class TextInput implements FormComponentInterface {
                disabled={this.disabled}
                readonly={this.readonly}
                onInput={e => this.valueChangedHandler(e)}
-               onChange={e => this.valueChange.emit(e.target['value'])} />
+               onChange={e => this.valueChangedHandler(e, 'change')} />
 
         <slot name="details">{this.details && <div part="details">{this.details}</div>}</slot>
 

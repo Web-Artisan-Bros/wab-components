@@ -33,6 +33,7 @@
      */
     const formSchema = {
       lazy: true,
+      useAjax: true,
       "fields": [
         {
           "type": "text",
@@ -40,7 +41,7 @@
           "label": "Nome",
           'placeholder': 'Inserisci il tuo nomeeeee',
           'conditions': (formData) => formData.cognome === 'ciao',
-          validators: (yup) => yup.string().defined().min(4),
+          // validators: (yup) => yup.string().defined().min(4),
         },
         {
           "type": "text",
@@ -49,7 +50,7 @@
           'placeholder': 'Inserisci il tuo cognome',
           'readonly': true,
           value: 'ciao',
-          validators: (yup) => yup.string().required(),
+          // validators: (yup) => yup.string().required(),
         },
         {
           "type": "email",
@@ -58,7 +59,7 @@
           // disabled: (formData) => !formData?.hasEmail,
           conditions: (formData) => formData?.hasEmail,
           details: 'Inserisci la tua email',
-          validators: (yup) => yup.string().email().required(),
+          // validators: (yup) => yup.string().email().required(),
         },
         {
           "type": "checkbox",
@@ -68,7 +69,23 @@
           "checked" : true,
           "value": "si"
         }
-      ]
+      ],
+      onSubmit: async (formData) => {
+        console.log('submittinh', formData);
+
+        const res = await new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve({
+              status: 200,
+              data: {
+                message: 'ok',
+              },
+            });
+          }, 2000);
+        });
+
+        console.log('res', res);
+      },
     };
 
     document.getElementById('form-builder').schema = formSchema
