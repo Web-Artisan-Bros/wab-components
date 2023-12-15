@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.3.10",
-    "vue-library": "^1.0.1"
+    "wab-components-vue": "*"
   },
   "devDependencies": {
     "@stencil/vue-output-target": "^0.8.7",

@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-library": "^1.0.1",
+    "wab-components-react": "*",
     "tailwind": "^4.0.0"
   },
   "devDependencies": {

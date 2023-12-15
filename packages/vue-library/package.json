@@ -1,5 +1,5 @@
 {
-  "name": "vue-library",
+  "name": "wab-components-vue",
   "version": "1.0.1",
   "description": "> TODO: description",
   "author": "leicaflorian <florian.leica@gmail.com>",
@@ -24,5 +24,6 @@
   },
   "dependencies": {
     "wab-components": "^1.0.1"
-  }
+  },
+  "gitHead": "f4d590492c8d632ee1374b8e5706988e9554b885"
 }
