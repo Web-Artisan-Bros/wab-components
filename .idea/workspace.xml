@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="Updates build process" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/packages/app-vue/package.json" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ZAnup7aRSHV53LEAK4PJKjmJnF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/florianleica/WAB/wab-components/packages/my-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/florianleica/WAB/wab-form-builder/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/florianleica/WAB/wab-components/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/my-app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/stencil-library/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/packages" />
+      <recent name="$PROJECT_DIR$/src/components/form-controls" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="text-input.should have a label" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/form-controls/text-input/test/text-input.e2e.ts" />
+      <test-names>
+        <test-name value="text-input" />
+        <test-name value="should have a label" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/react-library/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/app-vue/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test.e2e.watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test.e2e.watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.test.e2e.watch" />
+        <item itemvalue="Jest.text-input.should have a label" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="" />
+      <created>1701873976870</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701873976870</updated>
+      <workItem from="1701873977954" duration="591000" />
+      <workItem from="1701874650587" duration="83000" />
+      <workItem from="1701874751083" duration="5519000" />
+      <workItem from="1702017900066" duration="73000" />
+      <workItem from="1702017993076" duration="9458000" />
+      <workItem from="1702067228685" duration="2009000" />
+      <workItem from="1702313867907" duration="14176000" />
+      <workItem from="1702335900864" duration="7017000" />
+      <workItem from="1702547412307" duration="13444000" />
+    </task>
+    <task id="LOCAL-00001" summary="Adds some tests">
+      <option name="closed" value="true" />
+      <created>1702024092165</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702024092165</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updates form sche,a">
+      <option name="closed" value="true" />
+      <created>1702024102723</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702024102723</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixes dynamic validation">
+      <option name="closed" value="true" />
+      <created>1702324233465</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702324233466</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updates jsdoc and types">
+      <option name="closed" value="true" />
+      <created>1702326272957</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702326272957</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adds lazy validation">
+      <option name="closed" value="true" />
+      <created>1702333404386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702333404386</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adds loading state">
+      <option name="closed" value="true" />
+      <created>1702335128965</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702335128965</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updates settings and readme">
+      <option name="closed" value="true" />
+      <created>1702335910557</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702335910557</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix tests">
+      <option name="closed" value="true" />
+      <created>1702336688409</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702336688409</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix tests">
+      <option name="closed" value="true" />
+      <created>1702336763548</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702336763548</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixes CI node version">
+      <option name="closed" value="true" />
+      <created>1702336798111</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702336798111</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updates build process">
+      <option name="closed" value="true" />
+      <created>1702341791442</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702341791442</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Adds some tests" />
+    <MESSAGE value="Updates form sche,a" />
+    <MESSAGE value="Fixes dynamic validation" />
+    <MESSAGE value="Updates jsdoc and types" />
+    <MESSAGE value="Adds lazy validation" />
+    <MESSAGE value="Adds loading state" />
+    <MESSAGE value="Updates settings and readme" />
+    <MESSAGE value="Fix tests" />
+    <MESSAGE value="Fixes CI node version" />
+    <MESSAGE value="Updates build process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates build process" />
+  </component>
+</project>
