@@ -1,8 +1,0 @@
-
-> vue-library@0.0.0 build
-> npm run tsc
-
-
-> vue-library@0.0.0 tsc
-> tsc -p . --outDir ./dist
-

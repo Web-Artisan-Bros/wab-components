@@ -1,8 +1,0 @@
-
-> react-library@0.0.0 build
-> npm run tsc
-
-
-> react-library@0.0.0 tsc
-> tsc -p . --outDir ./dist
-

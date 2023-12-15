@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="Adds nx publish scripts">
+    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="Remove .nx folder from git">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/cache/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/cache/d/daemon.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/cache/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/cache/file-map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/cache/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/cache/nx_files.nxt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +155,7 @@
       <workItem from="1702313867907" duration="14176000" />
       <workItem from="1702335900864" duration="7017000" />
       <workItem from="1702547412307" duration="15244000" />
-      <workItem from="1702657364666" duration="154000" />
+      <workItem from="1702657364666" duration="186000" />
     </task>
     <task id="LOCAL-00001" summary="Adds some tests">
       <option name="closed" value="true" />
@@ -267,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702657490374</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Remove .nx folder from git">
+      <option name="closed" value="true" />
+      <created>1702657529870</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702657529870</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +308,7 @@
     <MESSAGE value="Updates build process" />
     <MESSAGE value="Commit stencil dist folder" />
     <MESSAGE value="Adds nx publish scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds nx publish scripts" />
+    <MESSAGE value="Remove .nx folder from git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove .nx folder from git" />
   </component>
 </project>
