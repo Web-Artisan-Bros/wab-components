@@ -9,6 +9,33 @@
   <script type="module" src="/build/wab-components.esm.js"></script>
   <script nomodule src="/build/wab-components.js"></script>
   <link rel="stylesheet" href="/build/wab-components.css" />
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .wab-form-control {
+                margin-bottom: 40px;
+            }
+
+            wab-checkbox-input {
+                --size: 1.2rem;
+                --chcecked-bg-color: red;
+                --check-color: white;
+            //--check-width: 4px;
+
+                &::part(label) {
+                    gap: .3rem;
+                //border: 1px solid red;
+                }
+
+            //&::part(customInputCheckmark) { //    opacity: 1; //}
+
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,7 +83,7 @@
           "name": "email",
           "label": "Email",
           // disabled: (formData) => !formData?.hasEmail,
-          conditions: (formData) => formData?.hasEmail,
+            // conditions: (formData) => formData?.hasEmail,
           details: 'Inserisci la tua email',
           validators: (yup) => yup.string().email().required(),
         },
@@ -66,7 +93,8 @@
           "label": "Permetti Email",
           details: 'Inserisci la tua email',
           "checked" : true,
-          "value": "si"
+            'value': 'si',
+            validators: (yup) => yup.string().email().required().label('Ha un email')
         }
       ],
       onSubmit: async (formData) => {

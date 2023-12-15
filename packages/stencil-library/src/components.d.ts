@@ -8,16 +8,19 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { WabFormSchema } from "./components/form-builder/wab-form-schema";
 export { WabFormSchema } from "./components/form-builder/wab-form-schema";
 export namespace Components {
-    interface SelectInput {
-    }
     interface WabCheckboxInput {
         "checked": boolean;
         "details": string;
         "disabled": boolean;
         "errors": string;
         "label": string;
+        "labelPosition": 'left' | 'right';
         "name": string;
         "readonly": boolean;
+        /**
+          * Use the native checkbox html element instead of the custom css one
+         */
+        "useNative": boolean;
         "value": string;
     }
     interface WabFormBuilder {
@@ -27,6 +30,8 @@ export namespace Components {
         "method": string;
         "schema": string | WabFormSchema;
         "useAjax": Boolean;
+    }
+    interface WabSelectInput {
     }
     interface WabTextInput {
         "details": string;
@@ -49,12 +54,6 @@ export interface WabTextInputCustomEvent<T> extends CustomEvent<T> {
     target: HTMLWabTextInputElement;
 }
 declare global {
-    interface HTMLSelectInputElement extends Components.SelectInput, HTMLStencilElement {
-    }
-    var HTMLSelectInputElement: {
-        prototype: HTMLSelectInputElement;
-        new (): HTMLSelectInputElement;
-    };
     interface HTMLWabCheckboxInputElementEventMap {
         "valueChange": string;
         "valueInput": string;
@@ -79,6 +78,12 @@ declare global {
         prototype: HTMLWabFormBuilderElement;
         new (): HTMLWabFormBuilderElement;
     };
+    interface HTMLWabSelectInputElement extends Components.WabSelectInput, HTMLStencilElement {
+    }
+    var HTMLWabSelectInputElement: {
+        prototype: HTMLWabSelectInputElement;
+        new (): HTMLWabSelectInputElement;
+    };
     interface HTMLWabTextInputElementEventMap {
         "valueChange": string;
         "valueInput": string;
@@ -98,21 +103,20 @@ declare global {
         new (): HTMLWabTextInputElement;
     };
     interface HTMLElementTagNameMap {
-        "select-input": HTMLSelectInputElement;
         "wab-checkbox-input": HTMLWabCheckboxInputElement;
         "wab-form-builder": HTMLWabFormBuilderElement;
+        "wab-select-input": HTMLWabSelectInputElement;
         "wab-text-input": HTMLWabTextInputElement;
     }
 }
 declare namespace LocalJSX {
-    interface SelectInput {
-    }
     interface WabCheckboxInput {
         "checked"?: boolean;
         "details"?: string;
         "disabled"?: boolean;
         "errors"?: string;
         "label"?: string;
+        "labelPosition"?: 'left' | 'right';
         "name": string;
         /**
           * Fired when the value of the input changes, usually on change event
@@ -123,6 +127,10 @@ declare namespace LocalJSX {
          */
         "onValueInput"?: (event: WabCheckboxInputCustomEvent<string>) => void;
         "readonly"?: boolean;
+        /**
+          * Use the native checkbox html element instead of the custom css one
+         */
+        "useNative"?: boolean;
         "value"?: string;
     }
     interface WabFormBuilder {
@@ -131,6 +139,8 @@ declare namespace LocalJSX {
         "method"?: string;
         "schema"?: string | WabFormSchema;
         "useAjax"?: Boolean;
+    }
+    interface WabSelectInput {
     }
     interface WabTextInput {
         "details"?: string;
@@ -152,9 +162,9 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface IntrinsicElements {
-        "select-input": SelectInput;
         "wab-checkbox-input": WabCheckboxInput;
         "wab-form-builder": WabFormBuilder;
+        "wab-select-input": WabSelectInput;
         "wab-text-input": WabTextInput;
     }
 }
@@ -162,9 +172,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "select-input": LocalJSX.SelectInput & JSXBase.HTMLAttributes<HTMLSelectInputElement>;
             "wab-checkbox-input": LocalJSX.WabCheckboxInput & JSXBase.HTMLAttributes<HTMLWabCheckboxInputElement>;
             "wab-form-builder": LocalJSX.WabFormBuilder & JSXBase.HTMLAttributes<HTMLWabFormBuilderElement>;
+            "wab-select-input": LocalJSX.WabSelectInput & JSXBase.HTMLAttributes<HTMLWabSelectInputElement>;
             "wab-text-input": LocalJSX.WabTextInput & JSXBase.HTMLAttributes<HTMLWabTextInputElement>;
         }
     }

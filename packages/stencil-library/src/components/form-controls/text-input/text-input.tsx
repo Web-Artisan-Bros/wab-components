@@ -40,7 +40,7 @@ export class TextInput implements FormComponentInterface {
 
   render() {
     return (
-      <Host class="wab-form-input-wrapper">
+      <Host class="wab-form-control">
         <slot name="label">
           {this.label && (
             <label part="label" htmlFor={this.id}>

@@ -7,8 +7,13 @@ export declare class CheckboxInput implements FormComponentInterface {
     readonly: boolean;
     name: string;
     label: string;
+    labelPosition: 'left' | 'right';
     details: string;
     errors: string;
+    /**
+     * Use the native checkbox html element instead of the custom css one
+     */
+    useNative: boolean;
     valueChange: EventEmitter<string>;
     valueInput: EventEmitter<string>;
     get id(): string;

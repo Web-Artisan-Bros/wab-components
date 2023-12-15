@@ -14,8 +14,14 @@ export class CheckboxInput implements FormComponentInterface {
   @Prop() readonly: boolean = false;
   @Prop() name!: string;
   @Prop() label: string;
+  @Prop() labelPosition: 'left' | 'right' = 'right'
   @Prop() details: string;
   @Prop() errors: string;
+  
+  /**
+   * Use the native checkbox html element instead of the custom css one
+   */
+  @Prop() useNative: boolean = false
   
   @Event() valueChange: EventEmitter<string>;
   @Event() valueInput: EventEmitter<string>;
@@ -40,24 +46,25 @@ export class CheckboxInput implements FormComponentInterface {
   
   render () {
     return (
-      <Host class='wab-form-checkbox-wrapper'>
-        <slot name='label'>
-          {this.label && (
-            <label part='label' htmlFor={this.id}>
-              {this.label}
-            </label>
-          )}
-        </slot>
-        {/* poters cegliere se si vuole usare la checkbox html o una custom, nascondendo quella reale */}
-        <input part='input'
-               type='checkbox'
-               checked={this.checked}
-               id={this.id}
-               disabled={this.disabled}
-               value={this.value}
-               onInput={e => this.valueChangedHandler(e)}
-               onChange={e => this.valueChangedHandler(e, 'change')}
-        />
+      <Host class="wab-form-control">
+        <label part="label" >
+          {this.labelPosition === 'left' && <span part='labelText'>{this.label}</span>}
+          
+          <input part="input"
+                 type="checkbox"
+                 checked={this.checked}
+                 id={this.id}
+                 disabled={this.disabled}
+                 value={this.value}
+                 style={{ display: this.useNative ? 'inline-block' : 'none' }}
+                 onInput={e => this.valueChangedHandler(e)}
+                 onChange={e => this.valueChangedHandler(e, 'change')}
+          />
+          
+          {this.useNative ? null : (<span part="customInput"><span part="customInputCheckmark"></span></span>)}
+          
+          {this.labelPosition === 'right' && <span part='labelText'>{this.label}</span>}
+        </label>
         
         <slot name='details'>{this.details && <div part='details'>{this.details}</div>}</slot>
         
