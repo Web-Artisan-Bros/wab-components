@@ -11,20 +11,36 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".idea/workspace.xml",
-        "hash": "10813969530644891692"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "11387449810418742516"
-      },
-      {
         "file": ".DS_Store",
         "hash": "17829102371693614357"
       },
       {
+        "file": ".gitignore",
+        "hash": "8587836968507943632"
+      },
+      {
+        "file": ".idea/inspectionProfiles/Project_Default.xml",
+        "hash": "8136814431196090305"
+      },
+      {
+        "file": ".idea/php.xml",
+        "hash": "7046671987398238771"
+      },
+      {
+        "file": ".idea/vcs.xml",
+        "hash": "14600148892634157659"
+      },
+      {
+        "file": ".idea/workspace.xml",
+        "hash": "14613167263404201679"
+      },
+      {
         "file": "lerna.json",
         "hash": "17771143328099370368"
+      },
+      {
+        "file": "nx.json",
+        "hash": "12877810179999596100"
       },
       {
         "file": "package-lock.json",
@@ -35,271 +51,15 @@
         "hash": "9586325525186104367"
       },
       {
-        "file": ".gitignore",
-        "hash": "8587836968507943632"
-      },
-      {
         "file": "packages/.DS_Store",
         "hash": "1316046030803427526"
       },
       {
-        "file": "nx.json",
-        "hash": "12877810179999596100"
+        "file": "tsconfig.json",
+        "hash": "11387449810418742516"
       }
     ],
     "projectFileMap": {
-      "wab-components": [
-        {
-          "file": "packages/stencil-library/.editorconfig",
-          "hash": "10872272122097428313"
-        },
-        {
-          "file": "packages/stencil-library/.gitignore",
-          "hash": "341628938604786727"
-        },
-        {
-          "file": "packages/stencil-library/.prettierrc.json",
-          "hash": "12468947791480438124"
-        },
-        {
-          "file": "packages/stencil-library/LICENSE",
-          "hash": "16469975179465296534"
-        },
-        {
-          "file": "packages/stencil-library/package.json",
-          "hash": "838627497534555669",
-          "deps": [
-            "npm:@stencil/core",
-            "npm:@stencil/react-output-target",
-            "npm:lodash",
-            "npm:yup",
-            "npm:@stencil/vue-output-target",
-            "npm:@types/jest",
-            "npm:@types/node",
-            "npm:jest",
-            "npm:jest-cli",
-            "npm:puppeteer"
-          ]
-        },
-        {
-          "file": "packages/stencil-library/readme.md",
-          "hash": "16293018890638759950"
-        },
-        {
-          "file": "packages/stencil-library/src/components.d.ts",
-          "hash": "15935327273518511061"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-builder/form-builder.css",
-          "hash": "13027103444035360129"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-builder/form-builder.tsx",
-          "hash": "11762171299154395223"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-builder/readme.md",
-          "hash": "3316103290049407310"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-builder/test/form-builder.e2e.ts",
-          "hash": "14576443029787924021"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-builder/test/form-builder.spec.tsx",
-          "hash": "18328409299221523355"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-builder/wab-form-schema.ts",
-          "hash": "6036474648768581556"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/checkbox-input.css",
-          "hash": "13027103444035360129"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/checkbox-input.tsx",
-          "hash": "17931739418536774102"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/readme.md",
-          "hash": "17410183059156223778"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/test/checkbox-input.e2e.ts",
-          "hash": "6316366817856393719"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/test/checkbox-input.spec.tsx",
-          "hash": "12428429381925029075"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/text-input/readme.md",
-          "hash": "7929898719872072417"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/text-input/test/text-input.e2e.ts",
-          "hash": "5370544683350199502"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/text-input/test/text-input.spec.tsx",
-          "hash": "15495143150480251737"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/text-input/text-input.css",
-          "hash": "4456749490000188117"
-        },
-        {
-          "file": "packages/stencil-library/src/components/form-controls/text-input/text-input.tsx",
-          "hash": "5706952980505157412"
-        },
-        {
-          "file": "packages/stencil-library/src/components/select-input/readme.md",
-          "hash": "2464957269491712845"
-        },
-        {
-          "file": "packages/stencil-library/src/components/select-input/select-input.css",
-          "hash": "13027103444035360129"
-        },
-        {
-          "file": "packages/stencil-library/src/components/select-input/select-input.tsx",
-          "hash": "15962808161542385428"
-        },
-        {
-          "file": "packages/stencil-library/src/components/select-input/test/select-input.e2e.ts",
-          "hash": "17483946042686105484"
-        },
-        {
-          "file": "packages/stencil-library/src/components/select-input/test/select-input.spec.tsx",
-          "hash": "3255207693173200778"
-        },
-        {
-          "file": "packages/stencil-library/src/globals/app.css",
-          "hash": "9936439175961684551"
-        },
-        {
-          "file": "packages/stencil-library/src/index.html",
-          "hash": "11973309257585194700"
-        },
-        {
-          "file": "packages/stencil-library/src/index.ts",
-          "hash": "1595832445444187531"
-        },
-        {
-          "file": "packages/stencil-library/src/interfaces/FormComponentInterface.ts",
-          "hash": "1564338861953230340"
-        },
-        {
-          "file": "packages/stencil-library/src/utils/utils.spec.ts",
-          "hash": "13022197883372477777"
-        },
-        {
-          "file": "packages/stencil-library/src/utils/utils.ts",
-          "hash": "6437754543713555692"
-        },
-        {
-          "file": "packages/stencil-library/stencil.config.ts",
-          "hash": "12489350825828791146"
-        },
-        {
-          "file": "packages/stencil-library/tsconfig.json",
-          "hash": "9549721146382261228"
-        }
-      ],
-      "app-vue": [
-        {
-          "file": "packages/app-vue/.gitignore",
-          "hash": "13524112160863732742"
-        },
-        {
-          "file": "packages/app-vue/.vscode/extensions.json",
-          "hash": "4987258316065159537"
-        },
-        {
-          "file": "packages/app-vue/README.md",
-          "hash": "752862159294008587"
-        },
-        {
-          "file": "packages/app-vue/index.html",
-          "hash": "1242386748616833970"
-        },
-        {
-          "file": "packages/app-vue/jsconfig.json",
-          "hash": "1743110219249333965"
-        },
-        {
-          "file": "packages/app-vue/package.json",
-          "hash": "1803373451196113024",
-          "deps": [
-            "npm:vue",
-            "vue-library",
-            "npm:@stencil/vue-output-target",
-            "npm:@vitejs/plugin-vue",
-            "npm:@vitejs/plugin-vue-jsx",
-            "npm:vite"
-          ]
-        },
-        {
-          "file": "packages/app-vue/public/favicon.ico",
-          "hash": "18282137866655320110"
-        },
-        {
-          "file": "packages/app-vue/src/App.vue",
-          "hash": "10065040858404022479"
-        },
-        {
-          "file": "packages/app-vue/src/assets/base.css",
-          "hash": "9321010002578688550"
-        },
-        {
-          "file": "packages/app-vue/src/assets/logo.svg",
-          "hash": "9991375553522856255"
-        },
-        {
-          "file": "packages/app-vue/src/assets/main.css",
-          "hash": "4965547358129182663"
-        },
-        {
-          "file": "packages/app-vue/src/components/HelloWorld.vue",
-          "hash": "11250848239357208379"
-        },
-        {
-          "file": "packages/app-vue/src/components/TheWelcome.vue",
-          "hash": "7042006584072291712"
-        },
-        {
-          "file": "packages/app-vue/src/components/WelcomeItem.vue",
-          "hash": "12329010385993129720"
-        },
-        {
-          "file": "packages/app-vue/src/components/icons/IconCommunity.vue",
-          "hash": "13677159598623475801"
-        },
-        {
-          "file": "packages/app-vue/src/components/icons/IconDocumentation.vue",
-          "hash": "18236295658572451706"
-        },
-        {
-          "file": "packages/app-vue/src/components/icons/IconEcosystem.vue",
-          "hash": "15980754303377160206"
-        },
-        {
-          "file": "packages/app-vue/src/components/icons/IconSupport.vue",
-          "hash": "15808468652280814992"
-        },
-        {
-          "file": "packages/app-vue/src/components/icons/IconTooling.vue",
-          "hash": "4609695526839923136"
-        },
-        {
-          "file": "packages/app-vue/src/main.js",
-          "hash": "11579637863814975671"
-        },
-        {
-          "file": "packages/app-vue/vite.config.js",
-          "hash": "16229978464745758218"
-        }
-      ],
       "react-library": [
         {
           "file": "packages/react-library/README.md",
@@ -479,6 +239,778 @@
         {
           "file": "packages/react-library/tsconfig.json",
           "hash": "7094629722564318643"
+        }
+      ],
+      "app-vue": [
+        {
+          "file": "packages/app-vue/.gitignore",
+          "hash": "13524112160863732742"
+        },
+        {
+          "file": "packages/app-vue/.vscode/extensions.json",
+          "hash": "4987258316065159537"
+        },
+        {
+          "file": "packages/app-vue/README.md",
+          "hash": "752862159294008587"
+        },
+        {
+          "file": "packages/app-vue/index.html",
+          "hash": "1242386748616833970"
+        },
+        {
+          "file": "packages/app-vue/jsconfig.json",
+          "hash": "1743110219249333965"
+        },
+        {
+          "file": "packages/app-vue/package.json",
+          "hash": "1803373451196113024",
+          "deps": [
+            "npm:vue",
+            "vue-library",
+            "npm:@stencil/vue-output-target",
+            "npm:@vitejs/plugin-vue",
+            "npm:@vitejs/plugin-vue-jsx",
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "packages/app-vue/public/favicon.ico",
+          "hash": "18282137866655320110"
+        },
+        {
+          "file": "packages/app-vue/src/App.vue",
+          "hash": "10065040858404022479"
+        },
+        {
+          "file": "packages/app-vue/src/assets/base.css",
+          "hash": "9321010002578688550"
+        },
+        {
+          "file": "packages/app-vue/src/assets/logo.svg",
+          "hash": "9991375553522856255"
+        },
+        {
+          "file": "packages/app-vue/src/assets/main.css",
+          "hash": "4965547358129182663"
+        },
+        {
+          "file": "packages/app-vue/src/components/HelloWorld.vue",
+          "hash": "11250848239357208379"
+        },
+        {
+          "file": "packages/app-vue/src/components/TheWelcome.vue",
+          "hash": "7042006584072291712"
+        },
+        {
+          "file": "packages/app-vue/src/components/WelcomeItem.vue",
+          "hash": "12329010385993129720"
+        },
+        {
+          "file": "packages/app-vue/src/components/icons/IconCommunity.vue",
+          "hash": "13677159598623475801"
+        },
+        {
+          "file": "packages/app-vue/src/components/icons/IconDocumentation.vue",
+          "hash": "18236295658572451706"
+        },
+        {
+          "file": "packages/app-vue/src/components/icons/IconEcosystem.vue",
+          "hash": "15980754303377160206"
+        },
+        {
+          "file": "packages/app-vue/src/components/icons/IconSupport.vue",
+          "hash": "15808468652280814992"
+        },
+        {
+          "file": "packages/app-vue/src/components/icons/IconTooling.vue",
+          "hash": "4609695526839923136"
+        },
+        {
+          "file": "packages/app-vue/src/main.js",
+          "hash": "11579637863814975671"
+        },
+        {
+          "file": "packages/app-vue/vite.config.js",
+          "hash": "16229978464745758218"
+        }
+      ],
+      "wab-components": [
+        {
+          "file": "packages/stencil-library/.editorconfig",
+          "hash": "10872272122097428313"
+        },
+        {
+          "file": "packages/stencil-library/.gitignore",
+          "hash": "12900530645304827887"
+        },
+        {
+          "file": "packages/stencil-library/.prettierrc.json",
+          "hash": "12468947791480438124"
+        },
+        {
+          "file": "packages/stencil-library/LICENSE",
+          "hash": "16469975179465296534"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/index-c6146eac.js",
+          "hash": "661774398795473307"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/index-c6146eac.js.map",
+          "hash": "14291207173731899624"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/index.cjs.js",
+          "hash": "10038307054074221175"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/index.cjs.js.map",
+          "hash": "12296171610680391430"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/loader.cjs.js",
+          "hash": "13664236104503053882"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/loader.cjs.js.map",
+          "hash": "11000237684799088091"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/select-input.cjs.entry.js",
+          "hash": "4148086401522580957"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/select-input.cjs.entry.js.map",
+          "hash": "5469356663992222824"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/wab-checkbox-input_3.cjs.entry.js",
+          "hash": "2700610626731026953"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/wab-checkbox-input_3.cjs.entry.js.map",
+          "hash": "6464187457049281887"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/wab-components.cjs.js",
+          "hash": "17108040386373563960"
+        },
+        {
+          "file": "packages/stencil-library/dist/cjs/wab-components.cjs.js.map",
+          "hash": "3636169133881314968"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/collection-manifest.json",
+          "hash": "13266314884496360383"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/form-builder.css",
+          "hash": "13027103444035360129"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/form-builder.js",
+          "hash": "5697334596238194351"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/form-builder.js.map",
+          "hash": "7264623560605744332"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/test/form-builder.e2e.js",
+          "hash": "15999043130494352372"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/test/form-builder.e2e.js.map",
+          "hash": "11655392483906973918"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/test/form-builder.spec.js",
+          "hash": "626934432239482797"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/test/form-builder.spec.js.map",
+          "hash": "14266300672644116207"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/wab-form-schema.js",
+          "hash": "6258703120967776626"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-builder/wab-form-schema.js.map",
+          "hash": "17711554195190258997"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/checkbox-input/checkbox-input.css",
+          "hash": "13027103444035360129"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/checkbox-input/checkbox-input.js",
+          "hash": "4966020506558328232"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/checkbox-input/checkbox-input.js.map",
+          "hash": "402489849648429029"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/checkbox-input/test/checkbox-input.e2e.js",
+          "hash": "11302933031996312383"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/checkbox-input/test/checkbox-input.e2e.js.map",
+          "hash": "299159006123774796"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/checkbox-input/test/checkbox-input.spec.js",
+          "hash": "13136064637410551851"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/checkbox-input/test/checkbox-input.spec.js.map",
+          "hash": "1802949793271309615"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/text-input/test/text-input.e2e.js",
+          "hash": "3159516571173332829"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/text-input/test/text-input.e2e.js.map",
+          "hash": "12766822899037059634"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/text-input/test/text-input.spec.js",
+          "hash": "18319090710725539053"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/text-input/test/text-input.spec.js.map",
+          "hash": "16920565796227249500"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/text-input/text-input.css",
+          "hash": "4456749490000188117"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/text-input/text-input.js",
+          "hash": "4268292255348657071"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/form-controls/text-input/text-input.js.map",
+          "hash": "15494053220971756243"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/select-input/select-input.css",
+          "hash": "13027103444035360129"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/select-input/select-input.js",
+          "hash": "13663800065785271979"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/select-input/select-input.js.map",
+          "hash": "12317911986412932214"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/select-input/test/select-input.e2e.js",
+          "hash": "9509525146563693544"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/select-input/test/select-input.e2e.js.map",
+          "hash": "1363607015208277185"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/select-input/test/select-input.spec.js",
+          "hash": "3887315440805858042"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/components/select-input/test/select-input.spec.js.map",
+          "hash": "7093729535830835124"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/index.js",
+          "hash": "6941882752824842959"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/index.js.map",
+          "hash": "7812168209021964244"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/interfaces/FormComponentInterface.js",
+          "hash": "3111706148010268144"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/interfaces/FormComponentInterface.js.map",
+          "hash": "6828741881025728068"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/utils/utils.js",
+          "hash": "935074954151219293"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/utils/utils.js.map",
+          "hash": "9775640446501241039"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/utils/utils.spec.js",
+          "hash": "16975178041148804570"
+        },
+        {
+          "file": "packages/stencil-library/dist/collection/utils/utils.spec.js.map",
+          "hash": "13445539816341199198"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/checkbox-input.js",
+          "hash": "11707930306080068096"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/checkbox-input.js.map",
+          "hash": "14132868408461482184"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/index.d.ts",
+          "hash": "16589338095012741621"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/index.js",
+          "hash": "16041580991466294549"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/index.js.map",
+          "hash": "10437628139381126783"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/select-input.d.ts",
+          "hash": "1209455933336550234"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/select-input.js",
+          "hash": "17558765219378121323"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/select-input.js.map",
+          "hash": "3805085637465678804"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/text-input.js",
+          "hash": "1464927347226534056"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/text-input.js.map",
+          "hash": "16965758680231185918"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/utils.js",
+          "hash": "6874300832200317366"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/utils.js.map",
+          "hash": "10474914652442579552"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-checkbox-input.d.ts",
+          "hash": "1131863255375674976"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-checkbox-input.js",
+          "hash": "15832848563385744450"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-checkbox-input.js.map",
+          "hash": "16737015375222131282"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-form-builder.d.ts",
+          "hash": "14746698763164684683"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-form-builder.js",
+          "hash": "9615708355030409352"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-form-builder.js.map",
+          "hash": "16251105022617932362"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-text-input.d.ts",
+          "hash": "10344357960899254518"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-text-input.js",
+          "hash": "8455989698444532652"
+        },
+        {
+          "file": "packages/stencil-library/dist/components/wab-text-input.js.map",
+          "hash": "7241237692070820559"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/index-dc609f77.js",
+          "hash": "234502403159863597"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/index-dc609f77.js.map",
+          "hash": "175412940990049368"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/index.js",
+          "hash": "6716810401549102501"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/index.js.map",
+          "hash": "10437628139381126783"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/loader.js",
+          "hash": "6139767602211378081"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/loader.js.map",
+          "hash": "3505927195606219415"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/polyfills/core-js.js",
+          "hash": "9372231800648275618"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/polyfills/dom.js",
+          "hash": "13110162736329842951"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/polyfills/es5-html-element.js",
+          "hash": "400348029342293512"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/polyfills/index.js",
+          "hash": "11791336880110719351"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/polyfills/system.js",
+          "hash": "14705309622248605296"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/select-input.entry.js",
+          "hash": "17481608052281034330"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/select-input.entry.js.map",
+          "hash": "9233720346088824996"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/wab-checkbox-input_3.entry.js",
+          "hash": "3794714955267970881"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/wab-checkbox-input_3.entry.js.map",
+          "hash": "5713049256836946282"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/wab-components.js",
+          "hash": "16455776998949439019"
+        },
+        {
+          "file": "packages/stencil-library/dist/esm/wab-components.js.map",
+          "hash": "13244802967735020553"
+        },
+        {
+          "file": "packages/stencil-library/dist/index.cjs.js",
+          "hash": "17918283553729622524"
+        },
+        {
+          "file": "packages/stencil-library/dist/index.js",
+          "hash": "522187905561575556"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/components.d.ts",
+          "hash": "13104456144564584590"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/components/form-builder/form-builder.d.ts",
+          "hash": "16057084600774815545"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/components/form-builder/wab-form-schema.d.ts",
+          "hash": "10892618336228115067"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/components/form-controls/checkbox-input/checkbox-input.d.ts",
+          "hash": "6064351428387282548"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/components/form-controls/text-input/text-input.d.ts",
+          "hash": "11581681232590595358"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/components/select-input/select-input.d.ts",
+          "hash": "1617716936917101408"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/index.d.ts",
+          "hash": "1595832445444187531"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/interfaces/FormComponentInterface.d.ts",
+          "hash": "429361680229027262"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/stencil-public-runtime.d.ts",
+          "hash": "7642156713825775603"
+        },
+        {
+          "file": "packages/stencil-library/dist/types/utils/utils.d.ts",
+          "hash": "1428767872359868791"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/index.esm.js",
+          "hash": "2911520665886406673"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/index.esm.js.map",
+          "hash": "5099355389715060301"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/p-2935cb66.entry.js",
+          "hash": "16214806059606688205"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/p-2935cb66.entry.js.map",
+          "hash": "5097723844656175295"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/p-8f521b78.js",
+          "hash": "7436919214968925042"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/p-8f521b78.js.map",
+          "hash": "249645246216903782"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/p-d6c4ad87.entry.js",
+          "hash": "15002121342098768949"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/p-d6c4ad87.entry.js.map",
+          "hash": "2383867127109629682"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/wab-components.esm.js",
+          "hash": "13718954572009442381"
+        },
+        {
+          "file": "packages/stencil-library/dist/wab-components/wab-components.esm.js.map",
+          "hash": "2799620662350575615"
+        },
+        {
+          "file": "packages/stencil-library/loader/cdn.js",
+          "hash": "328827556434989647"
+        },
+        {
+          "file": "packages/stencil-library/loader/index.cjs.js",
+          "hash": "328827556434989647"
+        },
+        {
+          "file": "packages/stencil-library/loader/index.d.ts",
+          "hash": "3848700369090676084"
+        },
+        {
+          "file": "packages/stencil-library/loader/index.es2017.js",
+          "hash": "13777822595529037699"
+        },
+        {
+          "file": "packages/stencil-library/loader/index.js",
+          "hash": "4470839124272463808"
+        },
+        {
+          "file": "packages/stencil-library/loader/package.json",
+          "hash": "9751535938888514464"
+        },
+        {
+          "file": "packages/stencil-library/package.json",
+          "hash": "838627497534555669",
+          "deps": [
+            "npm:@stencil/core",
+            "npm:@stencil/react-output-target",
+            "npm:lodash",
+            "npm:yup",
+            "npm:@stencil/vue-output-target",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:jest",
+            "npm:jest-cli",
+            "npm:puppeteer"
+          ]
+        },
+        {
+          "file": "packages/stencil-library/readme.md",
+          "hash": "16293018890638759950"
+        },
+        {
+          "file": "packages/stencil-library/src/components.d.ts",
+          "hash": "15935327273518511061"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-builder/form-builder.css",
+          "hash": "13027103444035360129"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-builder/form-builder.tsx",
+          "hash": "11762171299154395223"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-builder/readme.md",
+          "hash": "3316103290049407310"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-builder/test/form-builder.e2e.ts",
+          "hash": "14576443029787924021"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-builder/test/form-builder.spec.tsx",
+          "hash": "18328409299221523355"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-builder/wab-form-schema.ts",
+          "hash": "6036474648768581556"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/checkbox-input.css",
+          "hash": "13027103444035360129"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/checkbox-input.tsx",
+          "hash": "17931739418536774102"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/readme.md",
+          "hash": "17410183059156223778"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/test/checkbox-input.e2e.ts",
+          "hash": "6316366817856393719"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/checkbox-input/test/checkbox-input.spec.tsx",
+          "hash": "12428429381925029075"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/text-input/readme.md",
+          "hash": "7929898719872072417"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/text-input/test/text-input.e2e.ts",
+          "hash": "5370544683350199502"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/text-input/test/text-input.spec.tsx",
+          "hash": "15495143150480251737"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/text-input/text-input.css",
+          "hash": "4456749490000188117"
+        },
+        {
+          "file": "packages/stencil-library/src/components/form-controls/text-input/text-input.tsx",
+          "hash": "5706952980505157412"
+        },
+        {
+          "file": "packages/stencil-library/src/components/select-input/readme.md",
+          "hash": "2464957269491712845"
+        },
+        {
+          "file": "packages/stencil-library/src/components/select-input/select-input.css",
+          "hash": "13027103444035360129"
+        },
+        {
+          "file": "packages/stencil-library/src/components/select-input/select-input.tsx",
+          "hash": "15962808161542385428"
+        },
+        {
+          "file": "packages/stencil-library/src/components/select-input/test/select-input.e2e.ts",
+          "hash": "17483946042686105484"
+        },
+        {
+          "file": "packages/stencil-library/src/components/select-input/test/select-input.spec.tsx",
+          "hash": "3255207693173200778"
+        },
+        {
+          "file": "packages/stencil-library/src/globals/app.css",
+          "hash": "9936439175961684551"
+        },
+        {
+          "file": "packages/stencil-library/src/index.html",
+          "hash": "11973309257585194700"
+        },
+        {
+          "file": "packages/stencil-library/src/index.ts",
+          "hash": "1595832445444187531"
+        },
+        {
+          "file": "packages/stencil-library/src/interfaces/FormComponentInterface.ts",
+          "hash": "1564338861953230340"
+        },
+        {
+          "file": "packages/stencil-library/src/utils/utils.spec.ts",
+          "hash": "13022197883372477777"
+        },
+        {
+          "file": "packages/stencil-library/src/utils/utils.ts",
+          "hash": "6437754543713555692"
+        },
+        {
+          "file": "packages/stencil-library/stencil.config.ts",
+          "hash": "12489350825828791146"
+        },
+        {
+          "file": "packages/stencil-library/tsconfig.json",
+          "hash": "9549721146382261228"
+        },
+        {
+          "file": "packages/stencil-library/www/build/index.esm.js",
+          "hash": "2911520665886406673"
+        },
+        {
+          "file": "packages/stencil-library/www/build/index.esm.js.map",
+          "hash": "5099355389715060301"
+        },
+        {
+          "file": "packages/stencil-library/www/build/p-2935cb66.entry.js",
+          "hash": "16214806059606688205"
+        },
+        {
+          "file": "packages/stencil-library/www/build/p-2935cb66.entry.js.map",
+          "hash": "5097723844656175295"
+        },
+        {
+          "file": "packages/stencil-library/www/build/p-8f521b78.js",
+          "hash": "7436919214968925042"
+        },
+        {
+          "file": "packages/stencil-library/www/build/p-8f521b78.js.map",
+          "hash": "249645246216903782"
+        },
+        {
+          "file": "packages/stencil-library/www/build/p-d6c4ad87.entry.js",
+          "hash": "15002121342098768949"
+        },
+        {
+          "file": "packages/stencil-library/www/build/p-d6c4ad87.entry.js.map",
+          "hash": "2383867127109629682"
+        },
+        {
+          "file": "packages/stencil-library/www/build/wab-components.esm.js",
+          "hash": "13718954572009442381"
+        },
+        {
+          "file": "packages/stencil-library/www/build/wab-components.esm.js.map",
+          "hash": "2799620662350575615"
+        },
+        {
+          "file": "packages/stencil-library/www/build/wab-components.js",
+          "hash": "7990267477901816839"
+        },
+        {
+          "file": "packages/stencil-library/www/host.config.json",
+          "hash": "1742711436056109355"
+        },
+        {
+          "file": "packages/stencil-library/www/index.html",
+          "hash": "15681396813476344871"
         }
       ],
       "app-react": [
