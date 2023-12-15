@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="Updates build process">
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/.gitignore" afterDir="false" />
+    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="Adds nx publish scripts">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/cache/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/cache/d/daemon.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -151,7 +153,7 @@
       <workItem from="1702313867907" duration="14176000" />
       <workItem from="1702335900864" duration="7017000" />
       <workItem from="1702547412307" duration="15244000" />
-      <workItem from="1702657364666" duration="43000" />
+      <workItem from="1702657364666" duration="154000" />
     </task>
     <task id="LOCAL-00001" summary="Adds some tests">
       <option name="closed" value="true" />
@@ -249,7 +251,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702657375000</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Commit stencil dist folder">
+      <option name="closed" value="true" />
+      <created>1702657440836</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702657440836</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Adds nx publish scripts">
+      <option name="closed" value="true" />
+      <created>1702657490374</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702657490374</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +296,8 @@
     <MESSAGE value="Fix tests" />
     <MESSAGE value="Fixes CI node version" />
     <MESSAGE value="Updates build process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates build process" />
+    <MESSAGE value="Commit stencil dist folder" />
+    <MESSAGE value="Adds nx publish scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds nx publish scripts" />
   </component>
 </project>

@@ -438,3 +438,20 @@
 [NX Daemon Server] - 2023-12-15T16:24:27.754Z - Done responding to the client handleRequestFileData
 [NX Daemon Server] - 2023-12-15T16:24:27.755Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 1.
 [NX Daemon Server] - 2023-12-15T16:24:28.382Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:24:56.830Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:24:56.830Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:24:56.830Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:24:56.831Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:24:56.831Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:24:56.831Z - Time taken for 'total for creating and serializing project graph' 0.07204198837280273ms
+[NX Daemon Server] - 2023-12-15T16:24:56.832Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:24:56.832Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:24:56.835Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:24:56.835Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:24:56.835Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:24:57.447Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:25:18.064Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:25:18.065Z - [WATCHER]: .gitignore was modified
+[NX Daemon Server] - 2023-12-15T16:25:18.065Z - [WATCHER]: Stopping the watcher for /Users/florianleica/WAB/wab-components (sources)
+[NX Daemon Server] - 2023-12-15T16:25:18.065Z - [WATCHER]: Stopping the watcher for /Users/florianleica/WAB/wab-components (outputs)
+[NX Daemon Server] - 2023-12-15T16:25:18.065Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"
