@@ -1,0 +1,21 @@
+
+> wab-components@1.0.1 build
+> stencil build --docs
+
+[2m[15:17.5][22m  [36m@stencil/core[39m
+[2m[15:17.6][22m  [36mv4.8.2[39m 🐳
+[2m[15:19.2][22m  build, wab-components, prod mode, started [2m...[22m
+[2m[15:19.2][22m  transpile started [2m...[22m
+[2m[15:21.5][22m  transpile finished [2min 2.27 s[22m
+[2m[15:21.5][22m  copy started [2m...[22m
+[2m[15:21.6][22m  generate custom elements + source maps started [2m...[22m
+[2m[15:21.6][22m  generate lazy + source maps started [2m...[22m
+[2m[15:21.7][22m  copy finished (0 files) [2min 191 ms[22m
+[2m[15:22.0][22m  generate custom elements + source maps finished [2min 459 ms[22m
+[2m[15:22.2][22m  generate lazy + source maps finished [2min 577 ms[22m
+[2m[15:22.2][22m  generating react-library started [2m...[22m
+[2m[15:22.2][22m  generating vue-library started [2m...[22m
+[2m[15:22.2][22m  generate vue-library finished [2min 2 ms[22m
+[2m[15:22.2][22m  generate react-library finished [2min 4 ms[22m
+[2m[15:22.2][22m  [1m[32mbuild finished[39m[22m [2min 3.00 s[22m
+

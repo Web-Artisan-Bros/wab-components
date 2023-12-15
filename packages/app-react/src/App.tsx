@@ -1,5 +1,5 @@
 import './App.css';
-import { WabTextInput, WabCheckboxInput, WabFormBuilder, defineCustomElements } from 'react-library';
+import { WabTextInput, WabCheckboxInput, WabFormBuilder,  defineCustomElements } from 'react-library';
 import { useState } from 'react';
 import { WabFormSchema } from 'wab-components';
 
@@ -49,7 +49,7 @@ function App () {
     onSubmit: async (formData) => {
       console.log('submittinh', formData);
       
-      const res = await new Promise((resolve, reject) => {
+      const res = await new Promise((resolve) => {
         setTimeout(() => {
           resolve({
             status: 200,

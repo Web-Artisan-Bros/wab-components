@@ -23,6 +23,6 @@
     "access": "public"
   },
   "dependencies": {
-    "stencil-library": "*"
+    "wab-components": "*"
   }
 }

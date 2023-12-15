@@ -1,4 +1,5 @@
 import { defineContainer } from './vue-component-lib/utils';
+export const SelectInput = defineContainer('select-input', undefined);
 export const WabCheckboxInput = defineContainer('wab-checkbox-input', undefined, [
     'checked',
     'value',

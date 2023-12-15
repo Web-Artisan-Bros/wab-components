@@ -1,0 +1,406 @@
+[NX Daemon Server] - 2023-12-15T16:10:51.264Z - Started listening on: /var/folders/8t/52pydpm14h5211_q_x5hb2hh0000gn/T/cb2079128294d38f41a1/d.sock
+[NX Daemon Server] - 2023-12-15T16:10:51.270Z - [WATCHER]: Subscribed to changes within: /Users/florianleica/WAB/wab-components (native)
+[NX Daemon Server] - 2023-12-15T16:10:51.273Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:10:51.273Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-12-15T16:10:51.274Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:10:51.275Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:10:51.285Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:10:51.285Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:10:51.285Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:10:51.346Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:10:51.346Z - Time taken for 'total for creating and serializing project graph' 70.93279102444649ms
+[NX Daemon Server] - 2023-12-15T16:10:51.350Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:10:51.350Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 71. Response time: 4.
+[NX Daemon Server] - 2023-12-15T16:10:51.353Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:10:51.353Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:10:51.353Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:10:51.382Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:10:51.382Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:10:51.382Z - Time taken for 'total for creating and serializing project graph' 0.23858299851417542ms
+[NX Daemon Server] - 2023-12-15T16:10:51.383Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:10:51.383Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:10:51.394Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:10:51.394Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:10:51.395Z - Handled HASH_TASKS. Handling time: 7. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:10:52.829Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:11:17.148Z - [WATCHER]: 1 file(s) created or restored, 1 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:11:17.148Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:17.249Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:11:17.249Z - [REQUEST]: .idea/workspace.xml,nx.json
+[NX Daemon Server] - 2023-12-15T16:11:17.249Z - [REQUEST]: .idea/workspace.xml.tmp
+[NX Daemon Server] - 2023-12-15T16:11:17.272Z - Time taken for 'hash changed files from watcher' 0.4879170060157776ms
+[NX Daemon Server] - 2023-12-15T16:11:25.028Z - [WATCHER]: nx.json was modified
+[NX Daemon Server] - 2023-12-15T16:11:25.028Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:25.159Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:11:25.159Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:25.229Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:11:25.229Z - [REQUEST]: nx.json,.idea/workspace.xml
+[NX Daemon Server] - 2023-12-15T16:11:25.229Z - [REQUEST]: .idea/workspace.xml.tmp
+[NX Daemon Server] - 2023-12-15T16:11:25.249Z - Time taken for 'hash changed files from watcher' 0.335999995470047ms
+[NX Daemon Server] - 2023-12-15T16:11:30.303Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:11:30.305Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:11:30.305Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:11:30.306Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:11:30.306Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:11:30.306Z - Time taken for 'total for creating and serializing project graph' 0.06174999475479126ms
+[NX Daemon Server] - 2023-12-15T16:11:30.307Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:11:30.307Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:11:30.310Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:11:30.310Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:11:30.310Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:11:30.340Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:11:30.340Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:11:30.340Z - Time taken for 'total for creating and serializing project graph' 0.10841697454452515ms
+[NX Daemon Server] - 2023-12-15T16:11:30.340Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:11:30.341Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:11:30.352Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:11:30.352Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:11:30.352Z - Handled HASH_TASKS. Handling time: 7. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:11:32.579Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:32.580Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:32.580Z - Handled RECORD_OUTPUTS_HASH. Handling time: 5. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:11:32.580Z - [WATCHER]: 0 file(s) created or restored, 12 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:11:32.580Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:32.683Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:11:32.684Z - [REQUEST]: packages/vue-library/dist/vue-component-lib/utils.d.ts,packages/vue-library/dist/plugin.d.ts,packages/vue-library/dist/components.js.map,packages/vue-library/dist/index.js,packages/vue-library/dist/index.js.map,packages/vue-library/dist/components.js,packages/vue-library/dist/vue-component-lib/utils.js.map,packages/vue-library/dist/index.d.ts,packages/vue-library/dist/vue-component-lib/utils.js,packages/vue-library/dist/plugin.js,packages/vue-library/dist/components.d.ts,packages/vue-library/dist/plugin.js.map
+[NX Daemon Server] - 2023-12-15T16:11:32.684Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:11:32.747Z - [WATCHER]: 0 file(s) created or restored, 14 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:11:32.748Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:32.751Z - Time taken for 'hash changed files from watcher' 2.0357079803943634ms
+[NX Daemon Server] - 2023-12-15T16:11:32.774Z - [WATCHER]: 0 file(s) created or restored, 16 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:11:32.775Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:32.780Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:32.780Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:32.780Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:11:32.958Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:11:32.958Z - [REQUEST]: packages/react-library/dist/components/stencil-generated/react-component-lib/utils/attachProps.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/index.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/interfaces.js.map,packages/react-library/dist/types/components/stencil-generated/react-component-lib/interfaces.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/createComponent.js,packages/react-library/dist/components/stencil-generated/react-component-lib/createComponent.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/index.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/attachProps.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/index.js,packages/react-library/dist/components/stencil-generated/react-component-lib/interfaces.js,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/case.js.map,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/case.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/case.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/attachProps.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/dev.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/dev.d.ts,packages/react-library/dist/index.js.map,packages/react-library/dist/types/components/stencil-generated/react-component-lib/createOverlayComponent.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/createOverlayComponent.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/index.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/index.js.map,packages/react-library/dist/components/stencil-generated/index.js,packages/react-library/dist/types/index.d.ts,packages/react-library/dist/components/stencil-generated/index.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/createOverlayComponent.js.map,packages/react-library/dist/index.js,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/dev.js.map,packages/react-library/dist/types/components/stencil-generated/index.d.ts,packages/react-library/dist/types/components/stencil-generated/react-component-lib/createComponent.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/index.js
+[NX Daemon Server] - 2023-12-15T16:11:32.958Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:11:32.977Z - Time taken for 'hash changed files from watcher' 3.8838339745998383ms
+[NX Daemon Server] - 2023-12-15T16:11:33.215Z - [WATCHER]: packages/app-vue/vite.config.js.timestamp-1702656693150-ae0aa44a8fd3c.mjs was created or restored
+[NX Daemon Server] - 2023-12-15T16:11:33.215Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:33.316Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:11:33.317Z - [REQUEST]: packages/app-vue/vite.config.js.timestamp-1702656693150-ae0aa44a8fd3c.mjs
+[NX Daemon Server] - 2023-12-15T16:11:33.317Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:11:33.367Z - Time taken for 'hash changed files from watcher' 0.43012499809265137ms
+[NX Daemon Server] - 2023-12-15T16:11:33.448Z - [WATCHER]: packages/app-vue/vite.config.js.timestamp-1702656693150-ae0aa44a8fd3c.mjs was deleted
+[NX Daemon Server] - 2023-12-15T16:11:33.449Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:33.650Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:11:33.650Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:11:33.651Z - [REQUEST]: packages/app-vue/vite.config.js.timestamp-1702656693150-ae0aa44a8fd3c.mjs
+[NX Daemon Server] - 2023-12-15T16:11:33.670Z - Time taken for 'hash changed files from watcher' 0.2320830225944519ms
+[NX Daemon Server] - 2023-12-15T16:11:34.323Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:34.397Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:34.397Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:34.397Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:11:34.425Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:34.444Z - [WATCHER]: packages/app-react/vite.config.ts.timestamp-1702656694380-fa4951c4bef4c.mjs was deleted
+[NX Daemon Server] - 2023-12-15T16:11:34.845Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:11:34.845Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:11:34.845Z - [REQUEST]: packages/app-react/vite.config.ts.timestamp-1702656694380-fa4951c4bef4c.mjs
+[NX Daemon Server] - 2023-12-15T16:11:34.859Z - Time taken for 'hash changed files from watcher' 0.2270830273628235ms
+[NX Daemon Server] - 2023-12-15T16:11:35.287Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:35.331Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:35.331Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:35.331Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:11:35.363Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:35.507Z - [WATCHER]: 0 file(s) created or restored, 11 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:11:35.507Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:11:35.627Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:35.627Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:11:35.627Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:11:35.633Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:11:36.309Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:11:36.310Z - [REQUEST]: packages/vue-library/lib/vue-component-lib/utils.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/dev.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/attachProps.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/createOverlayComponent.tsx,packages/react-library/lib/components/stencil-generated/react-component-lib/index.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/createComponent.tsx,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/index.tsx,packages/react-library/lib/components/stencil-generated/react-component-lib/interfaces.ts,packages/react-library/lib/components/stencil-generated/index.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/case.ts,packages/vue-library/lib/components.ts
+[NX Daemon Server] - 2023-12-15T16:11:36.310Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:11:36.342Z - Time taken for 'hash changed files from watcher' 1.1119169890880585ms
+[NX Daemon Server] - 2023-12-15T16:12:30.021Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:12:30.022Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-12-15T16:12:30.022Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:12:30.025Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:12:30.026Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:12:30.027Z - Time taken for 'total for creating and serializing project graph' 1.0307080149650574ms
+[NX Daemon Server] - 2023-12-15T16:12:30.029Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:12:30.029Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 3.
+[NX Daemon Server] - 2023-12-15T16:12:30.040Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:12:30.040Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:12:30.040Z - Time taken for 'total for creating and serializing project graph' 0.2254590094089508ms
+[NX Daemon Server] - 2023-12-15T16:12:30.041Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:12:30.041Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:13:13.626Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:13:13.626Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:13:13.627Z - Time taken for 'total for creating and serializing project graph' 0.41358301043510437ms
+[NX Daemon Server] - 2023-12-15T16:13:13.629Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:13:13.629Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2023-12-15T16:13:15.386Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:13:15.386Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:13:15.387Z - Time taken for 'total for creating and serializing project graph' 0.48658400774002075ms
+[NX Daemon Server] - 2023-12-15T16:13:15.389Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:13:15.390Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2023-12-15T16:13:15.853Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:13:15.853Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:13:15.854Z - Time taken for 'total for creating and serializing project graph' 0.566457986831665ms
+[NX Daemon Server] - 2023-12-15T16:13:15.857Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:13:15.857Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2023-12-15T16:13:16.292Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:13:16.292Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:13:16.293Z - Time taken for 'total for creating and serializing project graph' 0.35500001907348633ms
+[NX Daemon Server] - 2023-12-15T16:13:16.294Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:13:16.294Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-12-15T16:13:16.726Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:13:16.726Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:13:16.727Z - Time taken for 'total for creating and serializing project graph' 0.3645419776439667ms
+[NX Daemon Server] - 2023-12-15T16:13:16.729Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:13:16.729Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2023-12-15T16:13:17.455Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:13:17.456Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:13:17.456Z - Time taken for 'total for creating and serializing project graph' 0.5318750143051147ms
+[NX Daemon Server] - 2023-12-15T16:13:17.459Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:13:17.459Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 3.
+[NX Daemon Server] - 2023-12-15T16:15:09.122Z - [WATCHER]: 1 file(s) created or restored, 1 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:15:09.123Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:09.225Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:15:09.225Z - [REQUEST]: .idea/workspace.xml,nx.json
+[NX Daemon Server] - 2023-12-15T16:15:09.225Z - [REQUEST]: .idea/workspace.xml.tmp
+[NX Daemon Server] - 2023-12-15T16:15:09.248Z - Time taken for 'hash changed files from watcher' 0.6260000169277191ms
+[NX Daemon Server] - 2023-12-15T16:15:11.158Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:15:16.920Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:15:16.922Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:15:16.922Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:15:16.923Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:15:16.923Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:15:16.923Z - Time taken for 'total for creating and serializing project graph' 0.06691700220108032ms
+[NX Daemon Server] - 2023-12-15T16:15:16.925Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:15:16.925Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-12-15T16:15:16.927Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:15:16.929Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:15:16.929Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-12-15T16:15:16.958Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:15:16.958Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:15:16.958Z - Time taken for 'total for creating and serializing project graph' 0.11399999260902405ms
+[NX Daemon Server] - 2023-12-15T16:15:16.959Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:15:16.959Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:15:16.969Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:15:16.969Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:15:16.969Z - Handled HASH_TASKS. Handling time: 6. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:15:19.274Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:19.274Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:19.274Z - Handled RECORD_OUTPUTS_HASH. Handling time: 4. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:15:19.275Z - [WATCHER]: 0 file(s) created or restored, 12 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:15:19.275Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:19.374Z - [WATCHER]: 0 file(s) created or restored, 14 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:15:19.374Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:19.386Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:15:19.386Z - [REQUEST]: packages/vue-library/dist/components.js,packages/vue-library/dist/index.js,packages/vue-library/dist/plugin.js.map,packages/vue-library/dist/vue-component-lib/utils.js,packages/vue-library/dist/components.d.ts,packages/vue-library/dist/vue-component-lib/utils.js.map,packages/vue-library/dist/vue-component-lib/utils.d.ts,packages/vue-library/dist/plugin.js,packages/vue-library/dist/index.d.ts,packages/vue-library/dist/plugin.d.ts,packages/vue-library/dist/index.js.map,packages/vue-library/dist/components.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/createComponent.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/case.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/case.js.map,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/attachProps.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/interfaces.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/attachProps.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/interfaces.d.ts,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/index.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/index.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/attachProps.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/index.js,packages/react-library/dist/components/stencil-generated/react-component-lib/createComponent.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/interfaces.js,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/case.js
+[NX Daemon Server] - 2023-12-15T16:15:19.386Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:15:19.412Z - Time taken for 'hash changed files from watcher' 10.85029199719429ms
+[NX Daemon Server] - 2023-12-15T16:15:19.424Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:19.425Z - [WATCHER]: 0 file(s) created or restored, 16 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:15:19.438Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:19.438Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:19.438Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:15:19.627Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:15:19.627Z - [REQUEST]: packages/react-library/dist/components/stencil-generated/react-component-lib/index.js,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/dev.js,packages/react-library/dist/index.js,packages/react-library/dist/components/stencil-generated/react-component-lib/createOverlayComponent.js.map,packages/react-library/dist/index.js.map,packages/react-library/dist/components/stencil-generated/index.js,packages/react-library/dist/components/stencil-generated/react-component-lib/createOverlayComponent.js,packages/react-library/dist/types/index.d.ts,packages/react-library/dist/types/components/stencil-generated/react-component-lib/index.d.ts,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/dev.d.ts,packages/react-library/dist/components/stencil-generated/index.js.map,packages/react-library/dist/types/components/stencil-generated/index.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/index.js.map,packages/react-library/dist/types/components/stencil-generated/react-component-lib/createOverlayComponent.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/dev.js.map,packages/react-library/dist/types/components/stencil-generated/react-component-lib/createComponent.d.ts
+[NX Daemon Server] - 2023-12-15T16:15:19.627Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:15:19.655Z - Time taken for 'hash changed files from watcher' 0.6485420167446136ms
+[NX Daemon Server] - 2023-12-15T16:15:19.940Z - [WATCHER]: packages/app-vue/vite.config.js.timestamp-1702656919876-236f7f69e3cca.mjs was created or restored
+[NX Daemon Server] - 2023-12-15T16:15:19.940Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:20.042Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:15:20.042Z - [REQUEST]: packages/app-vue/vite.config.js.timestamp-1702656919876-236f7f69e3cca.mjs
+[NX Daemon Server] - 2023-12-15T16:15:20.042Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:15:20.075Z - Time taken for 'hash changed files from watcher' 0.16200000047683716ms
+[NX Daemon Server] - 2023-12-15T16:15:20.193Z - [WATCHER]: packages/app-vue/vite.config.js.timestamp-1702656919876-236f7f69e3cca.mjs was deleted
+[NX Daemon Server] - 2023-12-15T16:15:20.193Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:20.396Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:15:20.396Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:15:20.396Z - [REQUEST]: packages/app-vue/vite.config.js.timestamp-1702656919876-236f7f69e3cca.mjs
+[NX Daemon Server] - 2023-12-15T16:15:20.417Z - Time taken for 'hash changed files from watcher' 0.12745898962020874ms
+[NX Daemon Server] - 2023-12-15T16:15:21.015Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:21.082Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:21.082Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:21.082Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:15:21.115Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:21.180Z - [WATCHER]: packages/app-react/vite.config.ts.timestamp-1702656921116-aff5bf48b7d8e.mjs was deleted
+[NX Daemon Server] - 2023-12-15T16:15:21.180Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:21.581Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:15:21.581Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:15:21.581Z - [REQUEST]: packages/app-react/vite.config.ts.timestamp-1702656921116-aff5bf48b7d8e.mjs
+[NX Daemon Server] - 2023-12-15T16:15:21.597Z - Time taken for 'hash changed files from watcher' 0.12858301401138306ms
+[NX Daemon Server] - 2023-12-15T16:15:22.028Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:22.061Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:22.061Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:22.061Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:15:22.100Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:22.273Z - [WATCHER]: 0 file(s) created or restored, 11 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:15:22.273Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:15:22.392Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:22.392Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:15:22.392Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:15:22.397Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:15:23.075Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:15:23.075Z - [REQUEST]: packages/react-library/lib/components/stencil-generated/react-component-lib/createOverlayComponent.tsx,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/attachProps.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/createComponent.tsx,packages/react-library/lib/components/stencil-generated/react-component-lib/index.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/dev.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/case.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/interfaces.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/index.tsx,packages/vue-library/lib/vue-component-lib/utils.ts,packages/react-library/lib/components/stencil-generated/index.ts,packages/vue-library/lib/components.ts
+[NX Daemon Server] - 2023-12-15T16:15:23.075Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:15:23.091Z - Time taken for 'hash changed files from watcher' 0.36595800518989563ms
+[NX Daemon Server] - 2023-12-15T16:16:49.431Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:16:49.433Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:16:49.433Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:16:49.435Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:16:49.435Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:16:49.436Z - Time taken for 'total for creating and serializing project graph' 0.09787499904632568ms
+[NX Daemon Server] - 2023-12-15T16:16:49.437Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:16:49.437Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-12-15T16:16:49.439Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:16:49.439Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:16:49.439Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:16:49.468Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:17:39.918Z - [WATCHER]: 1 file(s) created or restored, 1 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:17:39.918Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:17:40.018Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:17:40.018Z - [REQUEST]: .idea/workspace.xml,lerna.json
+[NX Daemon Server] - 2023-12-15T16:17:40.018Z - [REQUEST]: .idea/workspace.xml.tmp
+[NX Daemon Server] - 2023-12-15T16:17:40.038Z - Time taken for 'hash changed files from watcher' 0.31720900535583496ms
+[NX Daemon Server] - 2023-12-15T16:18:39.425Z - [WATCHER]: 1 file(s) created or restored, 1 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:18:39.426Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:18:39.527Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:18:39.527Z - [REQUEST]: .idea/workspace.xml,nx.json
+[NX Daemon Server] - 2023-12-15T16:18:39.527Z - [REQUEST]: .idea/workspace.xml.tmp
+[NX Daemon Server] - 2023-12-15T16:18:39.547Z - Time taken for 'hash changed files from watcher' 0.4308749735355377ms
+[NX Daemon Server] - 2023-12-15T16:18:46.148Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:18:46.150Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:18:46.150Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:18:46.151Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:18:46.151Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:18:46.151Z - Time taken for 'total for creating and serializing project graph' 0.0838330090045929ms
+[NX Daemon Server] - 2023-12-15T16:18:46.153Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:18:46.153Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-12-15T16:18:46.156Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:18:46.156Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:18:46.156Z - Handled REQUEST_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:18:46.184Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:18:46.184Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:18:46.185Z - Time taken for 'total for creating and serializing project graph' 0.10300001502037048ms
+[NX Daemon Server] - 2023-12-15T16:18:46.185Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:18:46.185Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:18:46.196Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:18:46.196Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:18:46.196Z - Handled HASH_TASKS. Handling time: 6. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:18:47.199Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:21:17.262Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:21:17.263Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:17.331Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:17.332Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:21:17.364Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:21:17.364Z - [REQUEST]: packages/vue-library/package.json,packages/react-library/package.json,.idea/workspace.xml
+[NX Daemon Server] - 2023-12-15T16:21:17.364Z - [REQUEST]: .idea/workspace.xml.tmp
+[NX Daemon Server] - 2023-12-15T16:21:17.394Z - Time taken for 'hash changed files from watcher' 0.4046249985694885ms
+[NX Daemon Server] - 2023-12-15T16:21:22.292Z - [WATCHER]: nx.json was modified
+[NX Daemon Server] - 2023-12-15T16:21:22.293Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:22.365Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:21:22.365Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:22.494Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:21:22.494Z - [REQUEST]: nx.json,.idea/workspace.xml
+[NX Daemon Server] - 2023-12-15T16:21:22.494Z - [REQUEST]: .idea/workspace.xml.tmp
+[NX Daemon Server] - 2023-12-15T16:21:22.519Z - Time taken for 'hash changed files from watcher' 0.5330410003662109ms
+[NX Daemon Server] - 2023-12-15T16:21:25.233Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:21:25.234Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:21:25.234Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:21:25.235Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:21:25.235Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:21:25.235Z - Time taken for 'total for creating and serializing project graph' 0.061625003814697266ms
+[NX Daemon Server] - 2023-12-15T16:21:25.237Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:21:25.237Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-12-15T16:21:25.240Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:21:25.240Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:21:25.240Z - Handled REQUEST_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:21:25.269Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:21:25.269Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:21:25.269Z - Time taken for 'total for creating and serializing project graph' 0.09108397364616394ms
+[NX Daemon Server] - 2023-12-15T16:21:25.270Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:21:25.270Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:21:25.283Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:21:25.283Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2023-12-15T16:21:25.283Z - Handled HASH_TASKS. Handling time: 8. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:21:29.224Z - [WATCHER]: 0 file(s) created or restored, 11 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:21:29.225Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:29.326Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:21:29.326Z - [REQUEST]: packages/react-library/lib/components/stencil-generated/react-component-lib/createComponent.tsx,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/case.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/index.tsx,packages/react-library/lib/components/stencil-generated/react-component-lib/createOverlayComponent.tsx,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/dev.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/interfaces.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/utils/attachProps.ts,packages/react-library/lib/components/stencil-generated/index.ts,packages/vue-library/lib/components.ts,packages/vue-library/lib/vue-component-lib/utils.ts,packages/react-library/lib/components/stencil-generated/react-component-lib/index.ts
+[NX Daemon Server] - 2023-12-15T16:21:29.326Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:21:29.348Z - Time taken for 'hash changed files from watcher' 0.4954160153865814ms
+[NX Daemon Server] - 2023-12-15T16:21:29.356Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:29.356Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:29.356Z - Handled RECORD_OUTPUTS_HASH. Handling time: 6. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:21:30.692Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:30.692Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:30.692Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:21:30.711Z - [WATCHER]: 0 file(s) created or restored, 18 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:21:30.711Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:30.768Z - [WATCHER]: 0 file(s) created or restored, 17 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:21:30.769Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:30.787Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:30.788Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:30.788Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:21:30.831Z - [WATCHER]: 0 file(s) created or restored, 7 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:21:30.831Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:30.912Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:21:30.913Z - [REQUEST]: packages/vue-library/dist/vue-component-lib/utils.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/case.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/interfaces.js,packages/react-library/dist/components/stencil-generated/react-component-lib/interfaces.js.map,packages/vue-library/dist/plugin.d.ts,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/case.d.ts,packages/react-library/dist/types/components/stencil-generated/react-component-lib/interfaces.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/case.js,packages/vue-library/dist/index.js,packages/vue-library/dist/vue-component-lib/utils.js,packages/vue-library/dist/components.d.ts,packages/vue-library/dist/index.d.ts,packages/vue-library/dist/plugin.js.map,packages/vue-library/dist/components.js,packages/vue-library/dist/components.js.map,packages/vue-library/dist/index.js.map,packages/vue-library/dist/plugin.js,packages/vue-library/dist/vue-component-lib/utils.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/index.js,packages/react-library/dist/components/stencil-generated/react-component-lib/createComponent.js,packages/react-library/dist/components/stencil-generated/react-component-lib/createOverlayComponent.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/createComponent.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/attachProps.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/index.js.map,packages/react-library/dist/components/stencil-generated/index.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/index.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/attachProps.js,packages/react-library/dist/components/stencil-generated/react-component-lib/createComponent.js.map,packages/react-library/dist/components/stencil-generated/index.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/index.js,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/index.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/createOverlayComponent.js.map,packages/react-library/dist/types/components/stencil-generated/react-component-lib/createOverlayComponent.d.ts,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/attachProps.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/index.js.map,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/dev.js,packages/react-library/dist/types/index.d.ts,packages/react-library/dist/components/stencil-generated/react-component-lib/utils/dev.js.map,packages/react-library/dist/index.js,packages/react-library/dist/types/components/stencil-generated/index.d.ts,packages/react-library/dist/index.js.map,packages/react-library/dist/types/components/stencil-generated/react-component-lib/utils/dev.d.ts
+[NX Daemon Server] - 2023-12-15T16:21:30.913Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:21:30.926Z - Time taken for 'hash changed files from watcher' 0.817333996295929ms
+[NX Daemon Server] - 2023-12-15T16:21:31.128Z - [WATCHER]: packages/app-vue/vite.config.js.timestamp-1702657291064-1a1eabf05a368.mjs was created or restored
+[NX Daemon Server] - 2023-12-15T16:21:31.128Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:31.230Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:21:31.230Z - [REQUEST]: packages/app-vue/vite.config.js.timestamp-1702657291064-1a1eabf05a368.mjs
+[NX Daemon Server] - 2023-12-15T16:21:31.230Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:21:31.247Z - Time taken for 'hash changed files from watcher' 0.2533339858055115ms
+[NX Daemon Server] - 2023-12-15T16:21:31.320Z - [WATCHER]: packages/app-vue/vite.config.js.timestamp-1702657291064-1a1eabf05a368.mjs was deleted
+[NX Daemon Server] - 2023-12-15T16:21:31.321Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:31.522Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:21:31.522Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:21:31.522Z - [REQUEST]: packages/app-vue/vite.config.js.timestamp-1702657291064-1a1eabf05a368.mjs
+[NX Daemon Server] - 2023-12-15T16:21:31.535Z - Time taken for 'hash changed files from watcher' 0.10270801186561584ms
+[NX Daemon Server] - 2023-12-15T16:21:31.891Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:31.917Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:31.917Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:31.917Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:21:31.962Z - [WATCHER]: packages/app-react/vite.config.ts.timestamp-1702657291901-3b7baf5ad220a.mjs was deleted
+[NX Daemon Server] - 2023-12-15T16:21:31.962Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:32.363Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:21:32.364Z - [REQUEST]: 
+[NX Daemon Server] - 2023-12-15T16:21:32.364Z - [REQUEST]: packages/app-react/vite.config.ts.timestamp-1702657291901-3b7baf5ad220a.mjs
+[NX Daemon Server] - 2023-12-15T16:21:32.385Z - Time taken for 'hash changed files from watcher' 0.10558399558067322ms
+[NX Daemon Server] - 2023-12-15T16:21:32.674Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:32.687Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:32.687Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2023-12-15T16:21:32.687Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:21:32.692Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:21:32.732Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:21:42.075Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:21:42.076Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:21:42.076Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:21:42.077Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:21:42.077Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:21:42.077Z - Time taken for 'total for creating and serializing project graph' 0.078125ms
+[NX Daemon Server] - 2023-12-15T16:21:42.078Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:21:42.078Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:21:42.088Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:21:42.088Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:21:42.088Z - Time taken for 'total for creating and serializing project graph' 0.070250004529953ms
+[NX Daemon Server] - 2023-12-15T16:21:42.089Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:21:42.089Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:22:05.083Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:22:20.197Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:22:20.197Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:22:20.197Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-12-15T16:22:20.199Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-12-15T16:22:20.199Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-12-15T16:22:20.199Z - Time taken for 'total for creating and serializing project graph' 0.06908297538757324ms
+[NX Daemon Server] - 2023-12-15T16:22:20.200Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-12-15T16:22:20.200Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-12-15T16:22:20.203Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:22:20.203Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-12-15T16:22:20.203Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2023-12-15T16:22:20.851Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-12-15T16:22:30.420Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:22:30.422Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2023-12-15T16:22:30.524Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-12-15T16:22:30.524Z - [REQUEST]: .idea/workspace.xml
+[NX Daemon Server] - 2023-12-15T16:22:30.524Z - [REQUEST]: .idea/workspace.xml.tmp
+[NX Daemon Server] - 2023-12-15T16:22:30.555Z - Time taken for 'hash changed files from watcher' 0.5957089960575104ms

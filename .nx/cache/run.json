@@ -1,0 +1,65 @@
+{
+  "run": {
+    "command": "lerna run build",
+    "startTime": "2023-12-15T16:21:25.284Z",
+    "endTime": "2023-12-15T16:21:32.688Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "wab-components:build",
+      "target": "build",
+      "projectName": "wab-components",
+      "hash": "2875020309725575249",
+      "startTime": "2023-12-15T16:21:25.288Z",
+      "endTime": "2023-12-15T16:21:29.356Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "vue-library:build",
+      "target": "build",
+      "projectName": "vue-library",
+      "hash": "3621766769959297289",
+      "startTime": "2023-12-15T16:21:29.358Z",
+      "endTime": "2023-12-15T16:21:30.692Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "react-library:build",
+      "target": "build",
+      "projectName": "react-library",
+      "hash": "17926289971996437549",
+      "startTime": "2023-12-15T16:21:29.358Z",
+      "endTime": "2023-12-15T16:21:30.788Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "app-vue:build",
+      "target": "build",
+      "projectName": "app-vue",
+      "hash": "864310708880982102",
+      "startTime": "2023-12-15T16:21:30.692Z",
+      "endTime": "2023-12-15T16:21:31.917Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "app-react:build",
+      "target": "build",
+      "projectName": "app-react",
+      "hash": "5881074336180145867",
+      "startTime": "2023-12-15T16:21:30.788Z",
+      "endTime": "2023-12-15T16:21:32.687Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

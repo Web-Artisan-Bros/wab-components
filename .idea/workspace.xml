@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="Updates build process" />
+    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +55,6 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/florianleica/WAB/wab-components/packages/my-app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -148,7 +147,7 @@
       <workItem from="1702067228685" duration="2009000" />
       <workItem from="1702313867907" duration="14176000" />
       <workItem from="1702335900864" duration="7017000" />
-      <workItem from="1702547412307" duration="13444000" />
+      <workItem from="1702547412307" duration="15244000" />
     </task>
     <task id="LOCAL-00001" summary="Adds some tests">
       <option name="closed" value="true" />
