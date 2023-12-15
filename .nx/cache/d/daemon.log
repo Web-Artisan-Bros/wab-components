@@ -404,3 +404,8 @@
 [NX Daemon Server] - 2023-12-15T16:22:30.524Z - [REQUEST]: .idea/workspace.xml
 [NX Daemon Server] - 2023-12-15T16:22:30.524Z - [REQUEST]: .idea/workspace.xml.tmp
 [NX Daemon Server] - 2023-12-15T16:22:30.555Z - Time taken for 'hash changed files from watcher' 0.5957089960575104ms
+[NX Daemon Server] - 2023-12-15T16:23:27.058Z - [WATCHER]: packages/stencil-library/.gitignore was modified
+[NX Daemon Server] - 2023-12-15T16:23:27.059Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-12-15T16:23:27.059Z - [WATCHER]: Stopping the watcher for /Users/florianleica/WAB/wab-components (sources)
+[NX Daemon Server] - 2023-12-15T16:23:27.059Z - [WATCHER]: Stopping the watcher for /Users/florianleica/WAB/wab-components (outputs)
+[NX Daemon Server] - 2023-12-15T16:23:27.059Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"

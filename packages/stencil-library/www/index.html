@@ -1,0 +1,70 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <link rel="modulepreload" href="/build/p-8f521b78.js"><script type="module" data-stencil data-resources-url="/build/" data-stencil-namespace="wab-components">import{p as a,b as e}from"/build/p-8f521b78.js";export{s as setNonce}from"/build/p-8f521b78.js";const o=()=>{const e=import.meta.url;const o={};if(e!==""){o.resourcesUrl=new URL(".",e).href}return a(o)};o().then((a=>e([["p-2935cb66",[[1,"select-input"]]],["p-d6c4ad87",[[4,"wab-form-builder",{action:[1],method:[1],useAjax:[16],schema:[1],loading:[1028],formData:[32],formSchema:[32],formValidator:[32],getFormData:[64]},null,{schema:["onSchemaChange"],formData:["onFormDataChange"]}],[1,"wab-checkbox-input",{checked:[1028],value:[1],disabled:[4],readonly:[4],name:[1],label:[1],details:[1],errors:[1]}],[1,"wab-text-input",{value:[1025],placeholder:[1],type:[1],disabled:[4],readonly:[4],name:[1],label:[1],details:[1],errors:[1]}]]]],a)));
+//# sourceMappingURL=wab-components.esm.js.map
+</script> <script nomodule="" src="/build/wab-components.js" data-stencil></script> <link rel="stylesheet" href="/build/wab-components.css"> </head> <body> <!-- <wab-text-input value="red" name="name" label="Nome" placeholder="Inserisci il tuo nome"
+                  details="fai qualcosa di carino"
+                  errors="qualcosa è andato storto">
+    <div slot="details">ciao come va?</div>
+  </wab-text-input> --> <wab-form-builder id="form-builder"> <input type="hidden" name="csrf" value="86as87a68d6asd8"> </wab-form-builder> <script>
+    /**
+     *
+     * @type {import('./components/form-builder/wab-form-schema').WabFormSchema}
+     */
+    const formSchema = {
+      lazy: true,
+      useAjax: true,
+      "fields": [
+        {
+          "type": "text",
+          "name": "nome",
+          "label": "Nome",
+          'placeholder': 'Inserisci il tuo nomeeeee',
+          'conditions': (formData) => formData.cognome === 'ciao',
+          validators: (yup) => yup.string().defined().min(4),
+        },
+        {
+          "type": "text",
+          "name": "cognome",
+          "label": "Cognome",
+          'placeholder': 'Inserisci il tuo cognome',
+          'readonly': true,
+          value: 'ciao',
+          // validators: (yup) => yup.string().required(),
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Email",
+          // disabled: (formData) => !formData?.hasEmail,
+          conditions: (formData) => formData?.hasEmail,
+          details: 'Inserisci la tua email',
+          validators: (yup) => yup.string().email().required(),
+        },
+        {
+          "type": "checkbox",
+          "name": "hasEmail",
+          "label": "Permetti Email",
+          details: 'Inserisci la tua email',
+          "checked" : true,
+          "value": "si"
+        }
+      ],
+      onSubmit: async (formData) => {
+        console.log('submittinh', formData);
+
+        const res = await new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve({
+              status: 200,
+              data: {
+                message: 'ok',
+              },
+            });
+          }, 2000);
+        });
+
+        console.log('res', res);
+      },
+    };
+
+    document.getElementById('form-builder').schema = formSchema
+  </script> </body></html>
