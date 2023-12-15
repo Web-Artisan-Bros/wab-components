@@ -1,6 +1,6 @@
 {
   "name": "app-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.3.10",
-    "vue-library": "*"
+    "vue-library": "^1.0.1"
   },
   "devDependencies": {
     "@stencil/vue-output-target": "^0.8.7",

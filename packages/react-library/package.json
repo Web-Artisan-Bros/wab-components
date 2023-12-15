@@ -1,6 +1,6 @@
 {
   "name": "react-library",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "leicaflorian <florian.leica@gmail.com>",
   "homepage": "",
@@ -23,6 +23,6 @@
     "access": "public"
   },
   "dependencies": {
-    "wab-components": "*"
+    "wab-components": "^1.0.1"
   }
 }
