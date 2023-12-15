@@ -22,74 +22,74 @@
 
             }
         }</style> </head> <body> <!-- <wab-text-input value="red" name="name" label="Nome" placeholder="Inserisci il tuo nome"
-                  details="fai qualcosa di carino"
-                  errors="qualcosa è andato storto">
-    <div slot="details">ciao come va?</div>
-  </wab-text-input> --> <wab-form-builder id="form-builder"> <input type="hidden" name="csrf" value="86as87a68d6asd8"> </wab-form-builder> <script>
-    /**
-     *
-     * @type {import('./components/form-builder/wab-form-schema').WabFormSchema}
-     */
-    const formSchema = {
-      lazy: true,
-      useAjax: true,
-      "fields": [
-        {
-          "type": "text",
-          "name": "nome",
-          "label": "Nome",
-          'placeholder': 'Inserisci il tuo nomeeeee',
-          'conditions': (formData) => formData.cognome === 'ciao',
-          validators: (yup) => yup.string().defined().min(4),
-        },
-        {
-          "type": "text",
-          "name": "cognome",
-          "label": "Cognome",
-          'placeholder': 'Inserisci il tuo cognome',
-          'readonly': true,
-          value: 'ciao',
-          // validators: (yup) => yup.string().required(),
-        },
-        {
-          "type": "email",
-          "name": "email",
-          "label": "Email",
-          // disabled: (formData) => !formData?.hasEmail,
-            // conditions: (formData) => formData?.hasEmail,
-          details: 'Inserisci la tua email',
-          validators: (yup) => yup.string().email().required(),
-        },
-        {
-          "type": "checkbox",
-          "name": "hasEmail",
-          "label": "Permetti Email",
-          details: 'Inserisci la tua email',
-          "checked" : true,
-            'value': 'si',
-            validators: (yup) => yup.string().email().required().label('Ha un email')
+                    details="fai qualcosa di carino"
+                    errors="qualcosa è andato storto">
+      <div slot="details">ciao come va?</div>
+    </wab-text-input> --> <wab-form-builder id="form-builder"> <input type="hidden" name="csrf" value="86as87a68d6asd8"> <div slot="afterSubmit"> <div>sono dopo la submit</div> </div> </wab-form-builder> <script>
+        /**
+         *
+         * @type {import('./components/form-builder/wab-form-schema').WabFormSchema}
+         */
+        const formSchema = {
+            lazy: true,
+            useAjax: true,
+            'fields': [
+                {
+                    'type': 'text',
+                    'name': 'nome',
+                    'label': 'Nome',
+                    'placeholder': 'Inserisci il tuo nomeeeee',
+                    'conditions': (formData) => formData.cognome === 'ciao',
+                    validators: (yup) => yup.string().defined().min(4)
+                },
+                {
+                    'type': 'text',
+                    'name': 'cognome',
+                    'label': 'Cognome',
+                    'placeholder': 'Inserisci il tuo cognome',
+                    'readonly': true,
+                    value: 'ciao'
+                    // validators: (yup) => yup.string().required(),
+                },
+                {
+                    'type': 'email',
+                    'name': 'email',
+                    'label': 'Email',
+                    // disabled: (formData) => !formData?.hasEmail,
+                    // conditions: (formData) => formData?.hasEmail,
+                    details: 'Inserisci la tua email',
+                    validators: (yup) => yup.string().email().required()
+                },
+                {
+                    'type': 'checkbox',
+                    'name': 'hasEmail',
+                    'label': 'Permetti Email',
+                    details: 'Inserisci la tua email',
+                    'checked': true,
+                    'value': true,
+                    validators: (yup) => yup.bool().required().label('Ha un email')
+                }
+            ],
+            onSubmit: async (formData) => {
+                console.log('submittinh', formData)
+
+                const res = await new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve({
+                            status: 200,
+                            data: {
+                                message: 'ok'
+                            }
+                        })
+                    }, 2000)
+                })
+
+                console.log('res', res)
+            }
         }
-      ],
-      onSubmit: async (formData) => {
-        console.log('submittinh', formData);
 
-        const res = await new Promise((resolve, reject) => {
-          setTimeout(() => {
-            resolve({
-              status: 200,
-              data: {
-                message: 'ok',
-              },
-            });
-          }, 2000);
-        });
-
-        console.log('res', res);
-      },
-    };
-
-    document.getElementById('form-builder').schema = formSchema
-  </script> <script>
+        document.getElementById('form-builder').schema = formSchema
+    </script> <script>
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   // auto-unregister service worker during dev mode
   navigator.serviceWorker.getRegistration().then(function(registration) {

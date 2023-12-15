@@ -47,7 +47,7 @@ const patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(options => {
   globalScripts();
-  return bootstrapLazy([["wab-form-builder",[[4,"wab-form-builder",{"action":[1],"method":[1],"useAjax":[16],"schema":[1],"loading":[1028],"formData":[32],"formSchema":[32],"formValidator":[32],"getFormData":[64]},null,{"schema":["onSchemaChange"],"formData":["onFormDataChange"]}]]],["wab-select-input",[[1,"wab-select-input"]]],["wab-checkbox-input",[[1,"wab-checkbox-input",{"checked":[1028],"value":[1],"disabled":[4],"readonly":[4],"name":[1],"label":[1],"labelPosition":[1,"label-position"],"details":[1],"errors":[1],"useNative":[4,"use-native"]}]]],["wab-text-input",[[1,"wab-text-input",{"value":[1025],"placeholder":[1],"type":[1],"disabled":[4],"readonly":[4],"name":[1],"label":[1],"details":[1],"errors":[1]}]]]], options);
+  return bootstrapLazy([["wab-form-builder",[[4,"wab-form-builder",{"action":[1],"method":[1],"useAjax":[16],"schema":[1],"loading":[1028],"formData":[32],"formSchema":[32],"formValidator":[32],"submitComplete":[32],"showAfterSubmitEl":[32],"getFormData":[64]},null,{"schema":["onSchemaChange"],"formData":["onFormDataChange"],"submitComplete":["onAfterSubmitSlotChange"]}]]],["wab-select-input",[[1,"wab-select-input"]]],["wab-checkbox-input",[[1,"wab-checkbox-input",{"checked":[1028],"value":[1],"disabled":[4],"readonly":[4],"name":[1],"label":[1],"labelPosition":[1,"label-position"],"details":[1],"errors":[1],"useNative":[4,"use-native"]}]]],["wab-text-input",[[1,"wab-text-input",{"value":[1025],"placeholder":[1],"type":[1],"disabled":[4],"readonly":[4],"name":[1],"label":[1],"details":[1],"errors":[1]}]]]], options);
 });
 
 //# sourceMappingURL=wab-components.esm.js.map

@@ -10,7 +10,10 @@ export declare class FormBuilder implements ComponentInterface {
     formData: any;
     formSchema: WabFormSchema;
     formValidator: yup.Schema;
+    submitComplete: boolean;
+    showAfterSubmitEl: boolean;
     el: HTMLElement;
+    afterSubmitSlot: Element;
     formEl: HTMLFormElement;
     initialValues: any;
     /**
@@ -38,6 +41,9 @@ export declare class FormBuilder implements ComponentInterface {
      * When this changes, we need to rebuild the validator schema
      */
     onFormDataChange(): void;
+    /**
+     * Return the actual form data
+     */
     getFormData(): Promise<any>;
     /**
      * Event handler for the input value change. This will be on keyup for text inputs
@@ -106,6 +112,7 @@ export declare class FormBuilder implements ComponentInterface {
      */
     submitFakeForm(dataToSubmit: any): void;
     invokeEventFn(name: string, ...args: any): Promise<void>;
+    onAfterSubmitSlotChange(): void;
     /**
      * Get the right component for the field based on its type
      *

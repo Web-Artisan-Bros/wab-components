@@ -25,6 +25,9 @@ export namespace Components {
     }
     interface WabFormBuilder {
         "action": string;
+        /**
+          * Return the actual form data
+         */
         "getFormData": () => Promise<any>;
         "loading": boolean;
         "method": string;

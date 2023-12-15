@@ -1,4 +1,15 @@
-import { Component, Element, Host, Prop, State, Watch, h, ComponentInterface, JSX, Method } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Host,
+  Prop,
+  State,
+  Watch,
+  h,
+  ComponentInterface,
+  JSX,
+  Method,
+} from '@stencil/core'
 import { WabFormSchema, WabFormSchemaField } from './wab-form-schema';
 import * as yup from 'yup';
 
@@ -17,9 +28,12 @@ export class FormBuilder implements ComponentInterface {
   @State() formData: any;
   @State() formSchema: WabFormSchema;
   @State() formValidator: yup.Schema;
+  @State() submitComplete: boolean = false
+  @State() showAfterSubmitEl: boolean = false
   
   @Element() el: HTMLElement;
   
+  afterSubmitSlot: Element
   formEl: HTMLFormElement;
   initialValues: any;
   
@@ -34,6 +48,7 @@ export class FormBuilder implements ComponentInterface {
     const slottedInputs = this.el.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('input, select, textarea');
     
     this.resetValidationErrors();
+    this.submitComplete = false
     
     try {
       // Retrieve all data from the form
@@ -60,7 +75,7 @@ export class FormBuilder implements ComponentInterface {
       
       this.loading = true;
       
-      console.log('onbeforesubmit');
+      // console.log('onbeforesubmit');
       await this.invokeEventFn('onBeforeSubmit', dataToSubmit);
       
       if (!this.formSchema.useAjax) {
@@ -68,8 +83,11 @@ export class FormBuilder implements ComponentInterface {
       } else {
         await this.invokeEventFn('onSubmit', dataToSubmit);
       }
-      console.log('after submit');
+      
+      // console.log('after submit');
       await this.invokeEventFn('onAfterSubmit', dataToSubmit);
+      
+      this.submitComplete = true
     } catch (e) {
       if (e.name === 'ValidationError') {
         await this.storeValidationErrors(e);
@@ -142,6 +160,9 @@ export class FormBuilder implements ComponentInterface {
     this.buildValidatorSchema();
   }
   
+  /**
+   * Return the actual form data
+   */
   @Method()
   async getFormData () {
     return this.formData;
@@ -352,6 +373,11 @@ export class FormBuilder implements ComponentInterface {
     return Promise.resolve();
   }
   
+  @Watch('submitComplete')
+  onAfterSubmitSlotChange () {
+    this.showAfterSubmitEl = !!this.afterSubmitSlot.children.length
+  }
+  
   /**
    * Get the right component for the field based on its type
    *
@@ -433,11 +459,14 @@ export class FormBuilder implements ComponentInterface {
   render () {
     return (
       <Host class={{ 'loading': this.loading }}>
+        
         <form action={this.action}
               method={this.method}
               ref={el => (this.formEl = el)}
+              style={{ display: this.showAfterSubmitEl ? 'none': ''}}
               onSubmit={e => this.onSubmit(e)}
               onReset={e => this.onReset(e)}>
+          
           {/* Custom inputs. Usually hidden ones */}
           <slot></slot>
           
@@ -452,6 +481,11 @@ export class FormBuilder implements ComponentInterface {
             </button>
           </slot>
         </form>
+        
+        <div ref={(e) => this.afterSubmitSlot = e} style={{ display: this.showAfterSubmitEl ? 'block': 'none'}}>
+          <slot name="afterSubmit"
+          ></slot>
+        </div>
       </Host>
     );
   }

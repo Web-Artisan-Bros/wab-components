@@ -2646,6 +2646,8 @@ const FormBuilder = class {
         this.formData = undefined;
         this.formSchema = undefined;
         this.formValidator = undefined;
+        this.submitComplete = false;
+        this.showAfterSubmitEl = false;
     }
     /**
      * Event handler for the form submission
@@ -2656,6 +2658,7 @@ const FormBuilder = class {
         e.preventDefault();
         const slottedInputs = this.el.querySelectorAll('input, select, textarea');
         this.resetValidationErrors();
+        this.submitComplete = false;
         try {
             // Retrieve all data from the form
             const dataToSubmit = {};
@@ -2674,7 +2677,7 @@ const FormBuilder = class {
                 abortEarly: false,
             });
             this.loading = true;
-            console.log('onbeforesubmit');
+            // console.log('onbeforesubmit');
             await this.invokeEventFn('onBeforeSubmit', dataToSubmit);
             if (!this.formSchema.useAjax) {
                 this.submitFakeForm(dataToSubmit);
@@ -2682,8 +2685,9 @@ const FormBuilder = class {
             else {
                 await this.invokeEventFn('onSubmit', dataToSubmit);
             }
-            console.log('after submit');
+            // console.log('after submit');
             await this.invokeEventFn('onAfterSubmit', dataToSubmit);
+            this.submitComplete = true;
         }
         catch (e) {
             if (e.name === 'ValidationError') {
@@ -2744,6 +2748,9 @@ const FormBuilder = class {
     onFormDataChange() {
         this.buildValidatorSchema();
     }
+    /**
+     * Return the actual form data
+     */
     async getFormData() {
         return this.formData;
     }
@@ -2920,6 +2927,9 @@ const FormBuilder = class {
         }
         return Promise.resolve();
     }
+    onAfterSubmitSlotChange() {
+        this.showAfterSubmitEl = !!this.afterSubmitSlot.children.length;
+    }
     /**
      * Get the right component for the field based on its type
      *
@@ -2982,13 +2992,14 @@ const FormBuilder = class {
      */
     render() {
         var _a;
-        return (h(Host, { class: { 'loading': this.loading } }, h("form", { action: this.action, method: this.method, ref: el => (this.formEl = el), onSubmit: e => this.onSubmit(e), onReset: e => this.onReset(e) }, h("slot", null), (_a = this.formSchema) === null || _a === void 0 ? void 0 :
-            _a.fields.map(field => this.getRightComponent(field)), h("slot", { name: 'actions' }, h("button", { type: 'reset', part: 'resetBtn', disabled: this.loading }, "Reset"), h("button", { type: 'submit', part: 'submitBtn', disabled: this.loading }, "Submit")))));
+        return (h(Host, { class: { 'loading': this.loading } }, h("form", { action: this.action, method: this.method, ref: el => (this.formEl = el), style: { display: this.showAfterSubmitEl ? 'none' : '' }, onSubmit: e => this.onSubmit(e), onReset: e => this.onReset(e) }, h("slot", null), (_a = this.formSchema) === null || _a === void 0 ? void 0 :
+            _a.fields.map(field => this.getRightComponent(field)), h("slot", { name: 'actions' }, h("button", { type: 'reset', part: 'resetBtn', disabled: this.loading }, "Reset"), h("button", { type: 'submit', part: 'submitBtn', disabled: this.loading }, "Submit"))), h("div", { ref: (e) => this.afterSubmitSlot = e, style: { display: this.showAfterSubmitEl ? 'block' : 'none' } }, h("slot", { name: "afterSubmit" }))));
     }
     get el() { return getElement(this); }
     static get watchers() { return {
         "schema": ["onSchemaChange"],
-        "formData": ["onFormDataChange"]
+        "formData": ["onFormDataChange"],
+        "submitComplete": ["onAfterSubmitSlotChange"]
     }; }
 };
 FormBuilder.style = formBuilderCss;
