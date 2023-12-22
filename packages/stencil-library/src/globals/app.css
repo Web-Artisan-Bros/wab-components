@@ -2,27 +2,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-wab-text-input {
 
-  /* &::part(label) {
-    color: green;
-  } */
-
-  /* &::part(input) {
-    border: 1px solid red;
-  }
-
-  &::part(input):focus {
-    border: 1px solid green;
-    outline: none;
-  }
-
-  &::part(details) {
-
-  }
-
-  &::part(errors) {
-    color: red;
-    font-size: .75rem;
-  } */
+* {
+  box-sizing: border-box;
 }

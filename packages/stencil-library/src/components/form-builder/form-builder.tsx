@@ -1,17 +1,20 @@
 import {
   Component,
-  Element,
-  Host,
-  Prop,
-  State,
-  Watch,
-  h,
   ComponentInterface,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  Host,
   JSX,
   Method,
+  Prop,
+  State,
+  Watch
 } from '@stencil/core'
-import { WabFormSchema, WabFormSchemaField } from './wab-form-schema';
-import * as yup from 'yup';
+import { WabFormSchema, WabFormSchemaField } from './wab-form-schema'
+import * as yup from 'yup'
+import { ValidationError } from 'yup'
 
 @Component({
   tag: 'wab-form-builder',
@@ -33,6 +36,14 @@ export class FormBuilder implements ComponentInterface {
   
   @Element() el: HTMLElement;
   
+  @Event() wabBeforeSubmit: EventEmitter<any>
+  @Event() wabSubmit: EventEmitter<any>
+  @Event() wabAfterSubmit: EventEmitter<any>
+  @Event() wabSubmitError: EventEmitter<any>
+  @Event() wabBeforeReset: EventEmitter<any>
+  @Event() wabAfterReset: EventEmitter<any>
+  @Event() wabValidationErrors: EventEmitter<{ formData: Record<string, any>, errors: ValidationError }>
+  
   afterSubmitSlot: Element
   formEl: HTMLFormElement;
   initialValues: any;
@@ -44,6 +55,7 @@ export class FormBuilder implements ComponentInterface {
    */
   async onSubmit (e: Event) {
     e.preventDefault();
+    e.stopPropagation()
     
     const slottedInputs = this.el.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('input, select, textarea');
     
@@ -106,6 +118,7 @@ export class FormBuilder implements ComponentInterface {
    */
   async onReset (e: Event) {
     e.preventDefault();
+    e.stopPropagation()
     
     await this.invokeEventFn('onBeforeReset', this.formData);
     
@@ -177,7 +190,7 @@ export class FormBuilder implements ComponentInterface {
   async onInputValueChange (field: WabFormSchemaField, value: any) {
     this.formData = {
       ...this.formData,
-      [field.name]: value,
+      [field.name]: value
     };
     
     // If the field is not lazy, validate it immediately
@@ -238,7 +251,7 @@ export class FormBuilder implements ComponentInterface {
     
     this.formSchema = newSchema;
     
-    await this.invokeEventFn('onValidationErrors', this.formData, e);
+    await this.invokeEventFn('onValidationErrors', { formData: this.formData, errors: e })
   }
   
   /**
@@ -364,8 +377,19 @@ export class FormBuilder implements ComponentInterface {
     document.body.appendChild(form);
     form.submit();
   }
-  
   async invokeEventFn (name: string, ...args: any): Promise<void> {
+    let eventToEmit = name.replace('on', 'wab')
+    
+    /**
+     * If args contains more than one element, wrap them in an array
+     * This is needed because the emit method accepts only one argument,
+     * and we want to pass all the arguments to the event handler
+     */
+    const toEmit = (args && args.length > 1 ? [args] : args)
+    this[eventToEmit].emit(...toEmit)
+    
+    // check if the schema has a function with the same name
+    // if so, call it
     if (this.formSchema.hasOwnProperty(name)) {
       return this.formSchema[name](...args);
     }
@@ -387,6 +411,8 @@ export class FormBuilder implements ComponentInterface {
   getRightComponent (field: WabFormSchemaField): JSX.Element {
     const { condition, disabled, readonly } = this.checkField(field);
     
+    console.log('getRightComponent', field.name, this.formData[field.name])
+    
     // If the field is not visible, return null and reset its value
     if (!condition) {
       // Reset the value of the field. This will also trigger the onValueChanged event
@@ -399,8 +425,8 @@ export class FormBuilder implements ComponentInterface {
       key: field.id,
       disabled: disabled,
       readonly: readonly,
-      part: field.type,
-      exportparts:"label, input, details, errors",
+      part: field.type as string,
+      // exportparts:"label, input, details, errors",
       onValueInput: (e: CustomEvent) => this.onInputValueChange(field, e.detail),
     };
     
@@ -408,6 +434,8 @@ export class FormBuilder implements ComponentInterface {
     if (this.formSchema.lazy) {
       props['onValueChange'] = () => this.validateSingleField(field);
     }
+    
+    // console.log('getRightComponent', field)
     
     switch (field.type) {
       case 'text':
@@ -420,11 +448,23 @@ export class FormBuilder implements ComponentInterface {
                           onKeyUp={e => e.key === 'Enter' && this.formEl.requestSubmit()}
           />
         );
+      
       case 'checkbox':
-        return (<wab-checkbox-input {...field}
-                                    {...props}
-                                    checked={this.formData[field.name]}
-        ></wab-checkbox-input>);
+        return (
+          <wab-checkbox-input {...field}
+                              {...props}
+                              checked={this.formData[field.name]}
+          ></wab-checkbox-input>
+        )
+      
+      case 'select':
+        return (
+          <wab-select-input {...field}
+                            {...props}
+                            value={this.formData[field.name]}
+          />
+        )
+      
       default:
         return <div>Unknown field type</div>;
     }

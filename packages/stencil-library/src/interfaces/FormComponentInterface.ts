@@ -12,12 +12,12 @@ export default interface FormComponentInterface extends ComponentInterface {
   /**
    * Fired when the value of the input changes, usually on input event keyUp
    */
-  valueInput: EventEmitter<string>;
+  valueInput: EventEmitter<any>;
   
   /**
    * Fired when the value of the input changes, usually on change event
    */
-  valueChange: EventEmitter<string>;
+  valueChange: EventEmitter<any>;
   
   /**
    * Return an id for the input

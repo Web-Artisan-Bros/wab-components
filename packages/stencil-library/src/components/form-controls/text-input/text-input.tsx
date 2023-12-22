@@ -4,7 +4,7 @@ import FormComponentInterface from '../../../interfaces/FormComponentInterface';
 
 @Component({
   tag: 'wab-text-input',
-  styleUrl: 'text-input.css',
+  styleUrls: ['text-input.css', '../../../commons/wab-input.css'],
   shadow: true,
 })
 export class TextInput implements FormComponentInterface {

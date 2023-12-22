@@ -4,7 +4,7 @@ import FormComponentInterface from '../../../interfaces/FormComponentInterface';
 
 @Component({
   tag: 'wab-checkbox-input',
-  styleUrl: 'checkbox-input.css',
+  styleUrls: ['../../../commons/wab-input.css', 'checkbox-input.css'],
   shadow: true,
 })
 export class CheckboxInput implements FormComponentInterface {

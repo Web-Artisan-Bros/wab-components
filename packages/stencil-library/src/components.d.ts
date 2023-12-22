@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { WabFormSchema } from "./components/form-builder/wab-form-schema";
+import { ValidationError } from "yup";
 export { WabFormSchema } from "./components/form-builder/wab-form-schema";
+export { ValidationError } from "yup";
 export namespace Components {
     interface WabCheckboxInput {
         "checked": boolean;
@@ -35,6 +37,21 @@ export namespace Components {
         "useAjax": Boolean;
     }
     interface WabSelectInput {
+        "details": string;
+        "disabled": boolean;
+        "errors": string;
+        "initialValue": any;
+        "label": string;
+        "multiple": boolean;
+        "name": string;
+        "options": { label: string, value: string }[];
+        "placeholder": string;
+        "readonly": boolean;
+        /**
+          * The input value if multiple is true, value is a string separated by commas
+          * @type {string}
+         */
+        "value": any;
     }
     interface WabTextInput {
         "details": string;
@@ -51,6 +68,14 @@ export namespace Components {
 export interface WabCheckboxInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLWabCheckboxInputElement;
+}
+export interface WabFormBuilderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLWabFormBuilderElement;
+}
+export interface WabSelectInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLWabSelectInputElement;
 }
 export interface WabTextInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -75,13 +100,42 @@ declare global {
         prototype: HTMLWabCheckboxInputElement;
         new (): HTMLWabCheckboxInputElement;
     };
+    interface HTMLWabFormBuilderElementEventMap {
+        "wabBeforeSubmit": any;
+        "wabSubmit": any;
+        "wabAfterSubmit": any;
+        "wabSubmitError": any;
+        "wabBeforeReset": any;
+        "wabAfterReset": any;
+        "wabValidationErrors": { formData: Record<string, any>, errors: ValidationError };
+    }
     interface HTMLWabFormBuilderElement extends Components.WabFormBuilder, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLWabFormBuilderElementEventMap>(type: K, listener: (this: HTMLWabFormBuilderElement, ev: WabFormBuilderCustomEvent<HTMLWabFormBuilderElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLWabFormBuilderElementEventMap>(type: K, listener: (this: HTMLWabFormBuilderElement, ev: WabFormBuilderCustomEvent<HTMLWabFormBuilderElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLWabFormBuilderElement: {
         prototype: HTMLWabFormBuilderElement;
         new (): HTMLWabFormBuilderElement;
     };
+    interface HTMLWabSelectInputElementEventMap {
+        "valueChange": string | string[];
+        "valueInput": string | string[];
+    }
     interface HTMLWabSelectInputElement extends Components.WabSelectInput, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLWabSelectInputElementEventMap>(type: K, listener: (this: HTMLWabSelectInputElement, ev: WabSelectInputCustomEvent<HTMLWabSelectInputElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLWabSelectInputElementEventMap>(type: K, listener: (this: HTMLWabSelectInputElement, ev: WabSelectInputCustomEvent<HTMLWabSelectInputElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLWabSelectInputElement: {
         prototype: HTMLWabSelectInputElement;
@@ -140,10 +194,40 @@ declare namespace LocalJSX {
         "action"?: string;
         "loading"?: boolean;
         "method"?: string;
+        "onWabAfterReset"?: (event: WabFormBuilderCustomEvent<any>) => void;
+        "onWabAfterSubmit"?: (event: WabFormBuilderCustomEvent<any>) => void;
+        "onWabBeforeReset"?: (event: WabFormBuilderCustomEvent<any>) => void;
+        "onWabBeforeSubmit"?: (event: WabFormBuilderCustomEvent<any>) => void;
+        "onWabSubmit"?: (event: WabFormBuilderCustomEvent<any>) => void;
+        "onWabSubmitError"?: (event: WabFormBuilderCustomEvent<any>) => void;
+        "onWabValidationErrors"?: (event: WabFormBuilderCustomEvent<{ formData: Record<string, any>, errors: ValidationError }>) => void;
         "schema"?: string | WabFormSchema;
         "useAjax"?: Boolean;
     }
     interface WabSelectInput {
+        "details"?: string;
+        "disabled"?: boolean;
+        "errors"?: string;
+        "initialValue"?: any;
+        "label"?: string;
+        "multiple"?: boolean;
+        "name": string;
+        /**
+          * Fired when the value of the input changes, usually on change event
+         */
+        "onValueChange"?: (event: WabSelectInputCustomEvent<string | string[]>) => void;
+        /**
+          * Fired when the value of the input changes, usually on input event keyUp
+         */
+        "onValueInput"?: (event: WabSelectInputCustomEvent<string | string[]>) => void;
+        "options"?: { label: string, value: string }[];
+        "placeholder"?: string;
+        "readonly"?: boolean;
+        /**
+          * The input value if multiple is true, value is a string separated by commas
+          * @type {string}
+         */
+        "value"?: any;
     }
     interface WabTextInput {
         "details"?: string;

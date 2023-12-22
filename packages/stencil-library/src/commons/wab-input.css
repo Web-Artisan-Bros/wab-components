@@ -1,0 +1,27 @@
+:host {
+    display: block;
+    font-size: 1em;
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    [part="label"] {
+        display: block;
+    }
+    
+    [part="input"] {
+        width: 100%;
+        font-size: inherit;
+    }
+    
+    [part="details"] {
+        font-size: .75rem;
+    }
+    
+    [part="errors"] {
+        font-size: .75rem;
+        color: red;
+    }
+    
+}

@@ -47,7 +47,7 @@
     </wab-text-input> -->
 
 
-    <wab-form-builder id="form-builder">
+    <wab-form-builder id="form-builder" style="width: 400px">
         <input type="hidden" name="csrf" value="86as87a68d6asd8">
 
         <div slot="afterSubmit">
@@ -98,6 +98,42 @@
                     'checked': true,
                     'value': true,
                     validators: (yup) => yup.bool().required().label('Ha un email')
+                },
+                {
+                    'type': 'select',
+                    'name': 'preference',
+                    'label': 'Preferenze',
+                    // 'placeholder': 'Scegli cosa ti piace',
+                    'details': 'Scegli cosa ti piace',
+                    // 'value': '2,3',
+                    'multiple': true,
+                    'options': [
+                        {
+                            label: 'Prima voce',
+                            value: '1'
+                        },
+                        {
+                            label: 'Seconda voce',
+                            value: '2'
+                        },
+                        {
+                            label: 'Terza voce',
+                            value: '3'
+                        },
+                        {
+                            label: 'Quarta voce',
+                            value: '4'
+                        },
+                        {
+                            label: 'Quinta voce',
+                            value: '5'
+                        },
+                        {
+                            label: 'Sesta voce',
+                            value: '6'
+                        }
+                    ],
+                    validators: (yup) => yup.array().required().label('Scelta obbligatoria')
                 }
             ],
             onSubmit: async (formData) => {
@@ -118,7 +154,20 @@
             }
         }
 
-        document.getElementById('form-builder').schema = formSchema
+        const form = document.getElementById('form-builder')
+        form.schema = formSchema
+
+        form.addEventListener('submit', (e) => {
+            console.log('submit', e)
+        })
+
+        form.addEventListener('wabSubmitError', (e) => {
+            console.log('submitError', e)
+        })
+
+        form.addEventListener('wabValidationErrors', (e) => {
+            console.log('validationErrors', e)
+        })
     </script>
 </body>
 
