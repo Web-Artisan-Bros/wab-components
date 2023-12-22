@@ -4,6 +4,7 @@ import { vueOutputTarget } from '@stencil/vue-output-target';
 
 export const config: Config = {
   namespace: 'wab-components',
+  globalStyle: "src/globals/app.css",
   outputTargets: [
     {
       type: 'dist',

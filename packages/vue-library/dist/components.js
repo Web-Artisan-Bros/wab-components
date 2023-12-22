@@ -1,5 +1,4 @@
 import { defineContainer } from './vue-component-lib/utils';
-export const SelectInput = defineContainer('select-input', undefined);
 export const WabCheckboxInput = defineContainer('wab-checkbox-input', undefined, [
     'checked',
     'value',
@@ -7,8 +6,10 @@ export const WabCheckboxInput = defineContainer('wab-checkbox-input', undefined,
     'readonly',
     'name',
     'label',
+    'labelPosition',
     'details',
     'errors',
+    'useNative',
     'valueChange',
     'valueInput'
 ]);
@@ -17,7 +18,29 @@ export const WabFormBuilder = defineContainer('wab-form-builder', undefined, [
     'method',
     'useAjax',
     'schema',
-    'loading'
+    'loading',
+    'wabBeforeSubmit',
+    'wabSubmit',
+    'wabAfterSubmit',
+    'wabSubmitError',
+    'wabBeforeReset',
+    'wabAfterReset',
+    'wabValidationErrors'
+]);
+export const WabSelectInput = defineContainer('wab-select-input', undefined, [
+    'value',
+    'placeholder',
+    'disabled',
+    'readonly',
+    'name',
+    'label',
+    'details',
+    'errors',
+    'options',
+    'multiple',
+    'initialValue',
+    'valueChange',
+    'valueInput'
 ]);
 export const WabTextInput = defineContainer('wab-text-input', undefined, [
     'value',

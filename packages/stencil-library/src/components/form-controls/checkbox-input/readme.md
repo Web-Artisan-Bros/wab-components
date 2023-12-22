@@ -7,16 +7,18 @@
 
 ## Properties
 
-| Property            | Attribute  | Description | Type      | Default     |
-| ------------------- | ---------- | ----------- | --------- | ----------- |
-| `checked`           | `checked`  |             | `boolean` | `false`     |
-| `details`           | `details`  |             | `string`  | `undefined` |
-| `disabled`          | `disabled` |             | `boolean` | `false`     |
-| `errors`            | `errors`   |             | `string`  | `undefined` |
-| `label`             | `label`    |             | `string`  | `undefined` |
-| `name` _(required)_ | `name`     |             | `string`  | `undefined` |
-| `readonly`          | `readonly` |             | `boolean` | `false`     |
-| `value`             | `value`    |             | `string`  | `undefined` |
+| Property            | Attribute        | Description                                                        | Type                | Default     |
+| ------------------- | ---------------- | ------------------------------------------------------------------ | ------------------- | ----------- |
+| `checked`           | `checked`        |                                                                    | `boolean`           | `false`     |
+| `details`           | `details`        |                                                                    | `string`            | `undefined` |
+| `disabled`          | `disabled`       |                                                                    | `boolean`           | `false`     |
+| `errors`            | `errors`         |                                                                    | `string`            | `undefined` |
+| `label`             | `label`          |                                                                    | `string`            | `undefined` |
+| `labelPosition`     | `label-position` |                                                                    | `"left" \| "right"` | `'right'`   |
+| `name` _(required)_ | `name`           |                                                                    | `string`            | `undefined` |
+| `readonly`          | `readonly`       |                                                                    | `boolean`           | `false`     |
+| `useNative`         | `use-native`     | Use the native checkbox html element instead of the custom css one | `boolean`           | `false`     |
+| `value`             | `value`          |                                                                    | `string`            | `undefined` |
 
 
 ## Events
@@ -29,12 +31,15 @@
 
 ## Shadow Parts
 
-| Part        | Description |
-| ----------- | ----------- |
-| `"details"` |             |
-| `"errors"`  |             |
-| `"input"`   |             |
-| `"label"`   |             |
+| Part                     | Description |
+| ------------------------ | ----------- |
+| `"custominput"`          |             |
+| `"custominputcheckmark"` |             |
+| `"details"`              |             |
+| `"errors"`               |             |
+| `"input"`                |             |
+| `"label"`                |             |
+| `"labeltext"`            |             |
 
 
 ## Dependencies

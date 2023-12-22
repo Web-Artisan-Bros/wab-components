@@ -1,4 +1,4 @@
-<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <script type="module" src="/build/wab-components.esm.js" data-stencil></script> <script nomodule="" src="/build/wab-components.js" data-stencil></script> <link rel="stylesheet" href="/build/wab-components.css"> <style>body {
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <link rel="modulepreload" href="/build/p-cdf4530a.js"><link rel="modulepreload" href="/build/p-8bbc056f.js"><script type="module" src="/build/p-cdf4530a.js" data-stencil data-resources-url="/build/" data-stencil-namespace="wab-components"></script> <script nomodule="" src="/build/wab-components.js" data-stencil></script> <style>:root{font-family:Arial, Helvetica, sans-serif}*{box-sizing:border-box}</style> <style>body {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,7 +25,7 @@
                     details="fai qualcosa di carino"
                     errors="qualcosa è andato storto">
       <div slot="details">ciao come va?</div>
-    </wab-text-input> --> <wab-form-builder id="form-builder"> <input type="hidden" name="csrf" value="86as87a68d6asd8"> <div slot="afterSubmit"> <div>sono dopo la submit</div> </div> </wab-form-builder> <script>
+    </wab-text-input> --> <wab-form-builder id="form-builder" style="width: 400px;"> <input type="hidden" name="csrf" value="86as87a68d6asd8"> <div slot="afterSubmit"> <div>sono dopo la submit</div> </div> </wab-form-builder> <script>
         /**
          *
          * @type {import('./components/form-builder/wab-form-schema').WabFormSchema}
@@ -68,6 +68,42 @@
                     'checked': true,
                     'value': true,
                     validators: (yup) => yup.bool().required().label('Ha un email')
+                },
+                {
+                    'type': 'select',
+                    'name': 'preference',
+                    'label': 'Preferenze',
+                    // 'placeholder': 'Scegli cosa ti piace',
+                    'details': 'Scegli cosa ti piace',
+                    // 'value': '2,3',
+                    'multiple': true,
+                    'options': [
+                        {
+                            label: 'Prima voce',
+                            value: '1'
+                        },
+                        {
+                            label: 'Seconda voce',
+                            value: '2'
+                        },
+                        {
+                            label: 'Terza voce',
+                            value: '3'
+                        },
+                        {
+                            label: 'Quarta voce',
+                            value: '4'
+                        },
+                        {
+                            label: 'Quinta voce',
+                            value: '5'
+                        },
+                        {
+                            label: 'Sesta voce',
+                            value: '6'
+                        }
+                    ],
+                    validators: (yup) => yup.array().required().label('Scelta obbligatoria')
                 }
             ],
             onSubmit: async (formData) => {
@@ -88,14 +124,18 @@
             }
         }
 
-        document.getElementById('form-builder').schema = formSchema
-    </script> <script>
-if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  // auto-unregister service worker during dev mode
-  navigator.serviceWorker.getRegistration().then(function(registration) {
-    if (registration) {
-      registration.unregister().then(function() { location.reload(true) });
-    }
-  });
-}
-</script></body></html>
+        const form = document.getElementById('form-builder')
+        form.schema = formSchema
+
+        form.addEventListener('submit', (e) => {
+            console.log('submit', e)
+        })
+
+        form.addEventListener('wabSubmitError', (e) => {
+            console.log('submitError', e)
+        })
+
+        form.addEventListener('wabValidationErrors', (e) => {
+            console.log('validationErrors', e)
+        })
+    </script> </body></html>

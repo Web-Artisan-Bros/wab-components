@@ -4,16 +4,20 @@ export interface WabFormSchemaField {
     id?: string;
     name: string;
     label: string;
-    type: string;
+    type: 'text' | 'email' | 'password' | 'textarea' | 'select' | 'checkbox';
     placeholder?: string;
     /**
      * Only for select
      */
-    options?: string[];
+    options?: {
+        label: string;
+        value: string;
+    }[];
     value?: any;
     checked?: any;
     disabled?: boolean | ((formData: any) => boolean);
     readonly?: boolean | ((formData: any) => boolean);
+    multiple?: boolean;
     validators?: (yup: any, yupSchema: yupContent.Schema) => yupContent.StringSchema;
     /**
      * Allow to show or hide the field

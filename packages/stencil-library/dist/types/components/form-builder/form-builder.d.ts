@@ -1,6 +1,7 @@
-import { ComponentInterface, JSX } from '../../stencil-public-runtime';
+import { ComponentInterface, EventEmitter, JSX } from '../../stencil-public-runtime';
 import { WabFormSchema, WabFormSchemaField } from './wab-form-schema';
 import * as yup from 'yup';
+import { ValidationError } from 'yup';
 export declare class FormBuilder implements ComponentInterface {
     action: string;
     method: string;
@@ -13,6 +14,16 @@ export declare class FormBuilder implements ComponentInterface {
     submitComplete: boolean;
     showAfterSubmitEl: boolean;
     el: HTMLElement;
+    wabBeforeSubmit: EventEmitter<any>;
+    wabSubmit: EventEmitter<any>;
+    wabAfterSubmit: EventEmitter<any>;
+    wabSubmitError: EventEmitter<any>;
+    wabBeforeReset: EventEmitter<any>;
+    wabAfterReset: EventEmitter<any>;
+    wabValidationErrors: EventEmitter<{
+        formData: Record<string, any>;
+        errors: ValidationError;
+    }>;
     afterSubmitSlot: Element;
     formEl: HTMLFormElement;
     initialValues: any;

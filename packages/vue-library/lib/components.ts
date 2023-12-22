@@ -8,9 +8,6 @@ import type { JSX } from 'stencil-library';
 
 
 
-export const SelectInput = /*@__PURE__*/ defineContainer<JSX.SelectInput>('select-input', undefined);
-
-
 export const WabCheckboxInput = /*@__PURE__*/ defineContainer<JSX.WabCheckboxInput>('wab-checkbox-input', undefined, [
   'checked',
   'value',
@@ -18,8 +15,10 @@ export const WabCheckboxInput = /*@__PURE__*/ defineContainer<JSX.WabCheckboxInp
   'readonly',
   'name',
   'label',
+  'labelPosition',
   'details',
   'errors',
+  'useNative',
   'valueChange',
   'valueInput'
 ]);
@@ -30,7 +29,31 @@ export const WabFormBuilder = /*@__PURE__*/ defineContainer<JSX.WabFormBuilder>(
   'method',
   'useAjax',
   'schema',
-  'loading'
+  'loading',
+  'wabBeforeSubmit',
+  'wabSubmit',
+  'wabAfterSubmit',
+  'wabSubmitError',
+  'wabBeforeReset',
+  'wabAfterReset',
+  'wabValidationErrors'
+]);
+
+
+export const WabSelectInput = /*@__PURE__*/ defineContainer<JSX.WabSelectInput>('wab-select-input', undefined, [
+  'value',
+  'placeholder',
+  'disabled',
+  'readonly',
+  'name',
+  'label',
+  'details',
+  'errors',
+  'options',
+  'multiple',
+  'initialValue',
+  'valueChange',
+  'valueInput'
 ]);
 
 
