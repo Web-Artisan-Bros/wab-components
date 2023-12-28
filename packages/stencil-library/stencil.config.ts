@@ -6,7 +6,6 @@ export const config: Config = {
   namespace: 'wab-components',
   globalStyle: "src/globals/app.css",
   hashFileNames: false,
-  buildEs5: 'prod',
   outputTargets: [
     {
       type: 'dist-custom-elements',
