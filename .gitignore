@@ -1,2 +1,6 @@
-node_modules/
-.nx/
+.DS_Store
+.idea
+node_modules
+dist/
+lerna-debug.log
+report/
