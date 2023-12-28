@@ -28,6 +28,10 @@ export interface WabFormSchemaField {
   details?: string;
 }
 
+export interface WabErrorLocaleEntry {
+  [key: string]: string
+}
+
 export interface WabFormSchema {
   // Options
   
@@ -40,6 +44,9 @@ export interface WabFormSchema {
    * If true, the form will be submitted using ajax instead of the default form submit
    */
   useAjax?: boolean;
+  
+  locales?: Record<string, WabErrorLocaleEntry>;
+  
   
   // fields schema
   fields: WabFormSchemaField[];

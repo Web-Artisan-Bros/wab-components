@@ -14,7 +14,7 @@ import {
 } from '@stencil/core'
 import { WabFormSchema, WabFormSchemaField } from './wab-form-schema'
 import * as yup from 'yup'
-import { ValidationError } from 'yup'
+import { setLocale, ValidationError } from 'yup'
 
 @Component({
   tag: 'wab-form-builder',
@@ -26,6 +26,7 @@ export class FormBuilder implements ComponentInterface {
   @Prop() method: string;
   @Prop() useAjax: Boolean = false;
   @Prop() schema: string | WabFormSchema;
+  @Prop() locale: string
   @Prop({ mutable: true }) loading: boolean = false;
   
   @State() formData: any;
@@ -170,6 +171,7 @@ export class FormBuilder implements ComponentInterface {
    */
   @Watch('formData')
   onFormDataChange () {
+    this.setValidatorLocale()
     this.buildValidatorSchema();
   }
   
@@ -267,6 +269,33 @@ export class FormBuilder implements ComponentInterface {
     // If the field is found, set its "errors" property
     if (field) {
       field.errors = error;
+    }
+  }
+  
+  @Watch('locale')
+  setValidatorLocale () {
+    
+    if (this.formSchema.locales) {
+      const translations = this.formSchema.locales[this.locale]
+      const localeObj = {}
+      
+      if (!translations) {
+        return
+      }
+      
+      Object.keys(translations).forEach(key => {
+        const parts = key.split('.')
+        
+        if (parts.length === 1) {
+          parts.push(parts[0])
+          parts[0] = 'mixed'
+        }
+        
+        localeObj[parts[0]] = {}
+        localeObj[parts[0]][parts[1]] = translations[key]
+      })
+      
+      setLocale(localeObj)
     }
   }
   

@@ -1,9 +1,9 @@
 /*
 // modulo
 
-import { defineCustomElements } from 'wab-components/loader/index'
+import { defineCustomElements } from 'wab-components/loader'
 
 defineCustomElements()
 */
 
-import "wab-components"
+import 'wab-components/dist/wab-components/wab-components.esm.js'

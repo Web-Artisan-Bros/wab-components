@@ -63,6 +63,16 @@
         const formSchema = {
             lazy: true,
             useAjax: true,
+            locales: {
+                "it": {
+                    "required": "Il campo è obbligatorio",
+                    "string.min": "Il campo ${label} deve essere lungo almeno $\{min} caratteri",
+                },
+                "en": {
+                    "required": "The field ${label} is required",
+                    "string.min": "The field \"${label}\" must contain at least ${min} characters",
+                },
+            },
             'fields': [
                 {
                     'type': 'text',
@@ -70,7 +80,7 @@
                     'label': 'Nome',
                     'placeholder': 'Inserisci il tuo nomeeeee',
                     'conditions': (formData) => formData.cognome === 'ciao',
-                    validators: (yup) => yup.string().defined().min(4)
+                    validators: (yup) => yup.string().required().min(4).label("Nome")
                 },
                 {
                     'type': 'text',
@@ -88,7 +98,7 @@
                     // disabled: (formData) => !formData?.hasEmail,
                     // conditions: (formData) => formData?.hasEmail,
                     details: 'Inserisci la tua email',
-                    validators: (yup) => yup.string().email().required()
+                    validators: (yup) => yup.string().email().required().label("Nome")
                 },
                 {
                     'type': 'checkbox',
