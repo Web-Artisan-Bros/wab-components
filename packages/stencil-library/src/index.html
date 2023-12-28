@@ -47,7 +47,7 @@
     </wab-text-input> -->
 
 
-    <wab-form-builder id="form-builder" style="width: 400px">
+    <wab-form-builder id="form-builder" style="width: 400px" locale="en">
         <input type="hidden" name="csrf" value="86as87a68d6asd8">
 
         <div slot="afterSubmit">
@@ -65,12 +65,20 @@
             useAjax: true,
             locales: {
                 "it": {
-                    "required": "Il campo è obbligatorio",
-                    "string.min": "Il campo ${label} deve essere lungo almeno $\{min} caratteri",
+                    "btn_reset": "Annulla",
+                    "btn_submit": "Invia",
+                    'validators': {
+                        'required': 'Il campo è obbligatorio',
+                        'string.min': 'Il campo ${label} deve essere lungo almeno $\{min} caratteri'
+                    }
                 },
                 "en": {
-                    "required": "The field ${label} is required",
-                    "string.min": "The field \"${label}\" must contain at least ${min} characters",
+                    "btn_reset": "Reset",
+                    "btn_submit": "Submit",
+                    'validators': {
+                        'required': 'The field ${label} is required',
+                        'string.min': 'The field "${label}" must contain at least ${min} characters'
+                    }
                 },
             },
             'fields': [

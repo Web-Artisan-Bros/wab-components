@@ -274,10 +274,9 @@ export class FormBuilder implements ComponentInterface {
   
   @Watch('locale')
   setValidatorLocale () {
-    
     if (this.formSchema.locales) {
-      const translations = this.formSchema.locales[this.locale]
       const localeObj = {}
+      const translations = this.formSchema.locales[this.locale]?.['validators']
       
       if (!translations) {
         return
@@ -426,6 +425,16 @@ export class FormBuilder implements ComponentInterface {
     return Promise.resolve();
   }
   
+  translate (key: string) {
+    const translations = this.formSchema.locales[this.locale]
+    
+    if (!translations) {
+      return key
+    }
+    
+    return translations[key] ?? key
+  }
+  
   @Watch('submitComplete')
   onAfterSubmitSlotChange () {
     this.showAfterSubmitEl = !!this.afterSubmitSlot.children.length
@@ -543,10 +552,10 @@ export class FormBuilder implements ComponentInterface {
           
           <slot name='actions'>
             <button type='reset' part='resetBtn' disabled={this.loading}>
-              Reset
+              {this.translate("btn_reset")}
             </button>
             <button type='submit' part='submitBtn' disabled={this.loading}>
-              Submit
+              {this.translate("btn_submit")}
             </button>
           </slot>
         </form>
