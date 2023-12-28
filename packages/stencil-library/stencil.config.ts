@@ -5,13 +5,18 @@ import { vueOutputTarget } from '@stencil/vue-output-target';
 export const config: Config = {
   namespace: 'wab-components',
   globalStyle: "src/globals/app.css",
+  hashFileNames: false,
+  buildEs5: 'prod',
   outputTargets: [
+    {
+      type: 'dist-custom-elements',
+      dir: 'custom-element',
+      empty: true
+    },
+    // lazy loading
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-    },
-    {
-      type: 'dist-custom-elements',
     },
     {
       type: 'docs-readme',
@@ -25,11 +30,12 @@ export const config: Config = {
       proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
     }),
     vueOutputTarget({
-      componentCorePackage: 'stencil-library',
+      componentCorePackage: 'wab-components',
       proxiesFile: '../vue-library/lib/components.ts',
     }),
   ],
   testing: {
     browserHeadless: "new",
   },
+  validatePrimaryPackageOutputTarget: true
 };
