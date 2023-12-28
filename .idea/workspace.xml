@@ -4,34 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="updates gitignore">
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/checkbox-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/checkbox-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/select-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/select-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/text-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/text-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/utils.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-checkbox-input.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-checkbox-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-checkbox-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-form-builder.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-form-builder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-form-builder.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-select-input.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-select-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-select-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-text-input.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-text-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-text-input.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/stencil.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/stencil.config.ts" afterDir="false" />
+    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="updates config">
+      <change afterPath="$PROJECT_DIR$/github/workflows/publish.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +177,7 @@
       <workItem from="1702547412307" duration="15244000" />
       <workItem from="1702657364666" duration="40432000" />
       <workItem from="1703262825017" duration="1850000" />
-      <workItem from="1703756000823" duration="3567000" />
+      <workItem from="1703756000823" duration="3840000" />
     </task>
     <task id="LOCAL-00001" summary="Adds some tests">
       <option name="closed" value="true" />
@@ -421,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703759013721</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="updates config">
+      <option name="closed" value="true" />
+      <created>1703759598459</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1703759598459</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,6 +547,7 @@
     <MESSAGE value="v1.0.3" />
     <MESSAGE value="updates build" />
     <MESSAGE value="updates gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates gitignore" />
+    <MESSAGE value="updates config" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates config" />
   </component>
 </project>
