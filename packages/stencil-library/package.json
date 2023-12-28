@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "description": "Web Components provided by Web Artisan Bros",
   "main": "dist/index.cjs.js",
-  "module": "dist/wab-components/wab-components.esm.js",
+  "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
