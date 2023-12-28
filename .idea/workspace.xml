@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="updates config">
-      <change afterPath="$PROJECT_DIR$/github/workflows/publish.yml" afterDir="false" />
+    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="adds workflow">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +177,7 @@
       <workItem from="1702547412307" duration="15244000" />
       <workItem from="1702657364666" duration="40432000" />
       <workItem from="1703262825017" duration="1850000" />
-      <workItem from="1703756000823" duration="3840000" />
+      <workItem from="1703756000823" duration="3904000" />
     </task>
     <task id="LOCAL-00001" summary="Adds some tests">
       <option name="closed" value="true" />
@@ -403,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703759598459</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="adds workflow">
+      <option name="closed" value="true" />
+      <created>1703759856790</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1703759856790</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,6 +556,7 @@
     <MESSAGE value="updates build" />
     <MESSAGE value="updates gitignore" />
     <MESSAGE value="updates config" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates config" />
+    <MESSAGE value="adds workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds workflow" />
   </component>
 </project>
