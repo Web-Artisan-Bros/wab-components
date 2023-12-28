@@ -1,6 +1,6 @@
 {
   "name": "wab-components",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Web Components provided by Web Artisan Bros",
   "main": "dist/index.cjs.js",
   "module": "dist/wab-components/wab-components.esm.js",
