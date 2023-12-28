@@ -4,124 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="v1.0.3">
-      <change afterPath="$PROJECT_DIR$/lerna-debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/app-js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/app-js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/app-js/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/checkbox-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/checkbox-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/select-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/select-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/text-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/text-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/utils.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-checkbox-input.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-checkbox-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-checkbox-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-form-builder.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-form-builder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-form-builder.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-select-input.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-select-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-select-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-text-input.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-text-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/custom-element/wab-text-input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/index-31344b45.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/index-31344b45.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/loader.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/wab-checkbox-input_4.entry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/wab-checkbox-input_4.entry.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/wab-components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm-es5/wab-components.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/index-29ae76d4.system.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/index-29ae76d4.system.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/index-31344b45.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/index-31344b45.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/index.system.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/index.system.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-checkbox-input_4.entry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-checkbox-input_4.entry.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-checkbox-input_4.system.entry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-checkbox-input_4.system.entry.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.system.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.system.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/index-29ae76d4.system.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/index-29ae76d4.system.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/index-31344b45.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/index-31344b45.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/index.system.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/index.system.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/p-06ce60dd.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/p-948a892a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-checkbox-input_4.entry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-checkbox-input_4.entry.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-checkbox-input_4.system.entry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-checkbox-input_4.system.entry.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.system.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.system.js.map" afterDir="false" />
+    <list default="true" id="ddde4937-f867-4175-aab6-fba944aebf3b" name="Changes" comment="updates gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/cjs/wab-checkbox-input_4.cjs.entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/dist/cjs/wab-checkbox-input_4.cjs.entry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/cjs/wab-checkbox-input_4.cjs.entry.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/dist/cjs/wab-checkbox-input_4.cjs.entry.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/checkbox-input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/checkbox-input.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/select-input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/select-input.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/text-input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/text-input.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/utils.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-checkbox-input.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-checkbox-input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-checkbox-input.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-form-builder.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-form-builder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-form-builder.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-select-input.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-select-input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-select-input.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-text-input.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-text-input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/components/wab-text-input.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/esm/wab-checkbox-input_4.entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm/wab-checkbox-input_4.entry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/esm/wab-checkbox-input_4.entry.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/dist/esm/wab-checkbox-input_4.entry.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/p-2f2e4f4a.entry.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/p-2f2e4f4a.entry.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/p-8bbc056f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/p-8bbc056f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.esm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/dist/wab-components/wab-components.esm.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/loader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/loader/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/stencil.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/stencil.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/p-2f2e4f4a.entry.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/p-2f2e4f4a.entry.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/p-525ea9c7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/p-8bbc056f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/p-8bbc056f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/p-cdf4530a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.esm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.esm.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/www/build/wab-components.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vue-library/dist/components.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue-library/dist/components.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vue-library/lib/components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue-library/lib/components.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +178,7 @@
       <workItem from="1702547412307" duration="15244000" />
       <workItem from="1702657364666" duration="40432000" />
       <workItem from="1703262825017" duration="1850000" />
-      <workItem from="1703756000823" duration="1388000" />
+      <workItem from="1703756000823" duration="3004000" />
     </task>
     <task id="LOCAL-00001" summary="Adds some tests">
       <option name="closed" value="true" />
@@ -463,7 +348,47 @@
       <option name="project" value="LOCAL" />
       <updated>1703260650059</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="updates build">
+      <option name="closed" value="true" />
+      <created>1703757615915</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703757615915</updated>
+    </task>
+    <task id="LOCAL-00023" summary="updates build">
+      <option name="closed" value="true" />
+      <created>1703757682189</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703757682189</updated>
+    </task>
+    <task id="LOCAL-00024" summary="updates gitignore">
+      <option name="closed" value="true" />
+      <created>1703758845078</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703758845078</updated>
+    </task>
+    <task id="LOCAL-00025" summary="updates gitignore">
+      <option name="closed" value="true" />
+      <created>1703758875059</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1703758875059</updated>
+    </task>
+    <task id="LOCAL-00026" summary="updates gitignore">
+      <option name="closed" value="true" />
+      <created>1703758964562</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1703758964562</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,6 +530,8 @@
     <MESSAGE value="Updates form builder to allow afterSubmit show" />
     <MESSAGE value="Updates select input" />
     <MESSAGE value="v1.0.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.0.3" />
+    <MESSAGE value="updates build" />
+    <MESSAGE value="updates gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates gitignore" />
   </component>
 </project>
