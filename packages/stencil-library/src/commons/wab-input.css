@@ -1,9 +1,18 @@
 :host {
     display: block;
     font-size: 1em;
+    --selection-color: white;
+    --selection-background-color: #007bff;
+    
     
     * {
         box-sizing: border-box;
+        
+        &::-moz-selection,
+        &::selection {
+            color: var(--selection-color);
+            background: var(--selection-background-color);
+        }
     }
     
     [part="label"] {
@@ -13,6 +22,9 @@
     [part="input"] {
         width: 100%;
         font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        background-color: inherit;
     }
     
     [part="details"] {
@@ -23,5 +35,6 @@
         font-size: .75rem;
         color: red;
     }
+    
     
 }

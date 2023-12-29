@@ -449,7 +449,7 @@ export class FormBuilder implements ComponentInterface {
   getRightComponent (field: WabFormSchemaField): JSX.Element {
     const { condition, disabled, readonly } = this.checkField(field);
     
-    console.log('getRightComponent', field.name, this.formData[field.name])
+    // console.log('getRightComponent', field.name, this.formData[field.name])
     
     // If the field is not visible, return null and reset its value
     if (!condition) {
@@ -477,6 +477,7 @@ export class FormBuilder implements ComponentInterface {
     
     switch (field.type) {
       case 'text':
+      case 'textarea':
       case 'email':
       case 'password':
         return (
@@ -504,7 +505,7 @@ export class FormBuilder implements ComponentInterface {
         )
       
       default:
-        return <div>Unknown field type</div>;
+        return <div>Unknown field type ({field.type})</div>;
     }
   }
   

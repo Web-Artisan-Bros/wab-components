@@ -56,7 +56,7 @@ export class CheckboxInput implements FormComponentInterface {
                  id={this.id}
                  disabled={this.disabled}
                  value={this.value}
-                 style={{ display: this.useNative ? 'inline-block' : 'none' }}
+                 style={{ "display": this.useNative ? 'inline-block' : 'none' }}
                  onInput={e => this.valueChangedHandler(e)}
                  onChange={e => this.valueChangedHandler(e, 'change')}
           />

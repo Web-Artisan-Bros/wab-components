@@ -55,13 +55,16 @@ export namespace Components {
         "value": any;
     }
     interface WabTextInput {
+        "cols": number;
         "details": string;
         "disabled": boolean;
         "errors": string;
         "label": string;
+        "labelPosition": 'top' | 'bottom';
         "name": string;
         "placeholder": string;
         "readonly": boolean;
+        "rows": number;
         "type": string;
         "value": string;
     }
@@ -232,10 +235,12 @@ declare namespace LocalJSX {
         "value"?: any;
     }
     interface WabTextInput {
+        "cols"?: number;
         "details"?: string;
         "disabled"?: boolean;
         "errors"?: string;
         "label"?: string;
+        "labelPosition"?: 'top' | 'bottom';
         "name": string;
         /**
           * Fired when the value of the input changes, usually on change event
@@ -247,6 +252,7 @@ declare namespace LocalJSX {
         "onValueInput"?: (event: WabTextInputCustomEvent<string>) => void;
         "placeholder"?: string;
         "readonly"?: boolean;
+        "rows"?: number;
         "type"?: string;
         "value"?: string;
     }
