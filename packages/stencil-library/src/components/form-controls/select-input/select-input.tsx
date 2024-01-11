@@ -1,6 +1,7 @@
 import { Component, Host, h, Prop, Event, EventEmitter, State, Watch } from '@stencil/core'
 import FormComponentInterface from '../../../interfaces/FormComponentInterface'
-import { getComponentId } from '../../../utils/utils'
+import { getComponentId, partName } from '../../../utils/utils'
+import { Label as WabLabel } from '../partials/Label'
 
 export interface SelectOption {
   label: string
@@ -24,11 +25,14 @@ export class SelectInput implements FormComponentInterface {
   @Prop() readonly: boolean = false
   @Prop() name!: string
   @Prop() label: string
+  @Prop() labelPosition: 'top' | 'bottom' = 'top'
   @Prop() details: string
   @Prop() errors: string
   @Prop() options: { label: string, value: string }[]
   @Prop() multiple: boolean = false
   @Prop({ mutable: true }) initialValue
+  
+  @State() focused: boolean = false
   
   @Event() valueChange: EventEmitter<string | string[]>
   @Event() valueInput: EventEmitter<string | string[]>
@@ -129,11 +133,13 @@ export class SelectInput implements FormComponentInterface {
   toggleFocus (e, isFocused: boolean) {
     e.preventDefault()
     
-    console.log(e)
-    console.log('toggleFocus', isFocused)
+    // console.log(e)
+    // console.log('toggleFocus', isFocused)
     
     // gestire animazione tramite js aspettando che questa sia completa
     this.isDropdownOpen = isFocused
+    
+    this.focused = isFocused
     
     this.dropdownEl.classList.toggle('dropdown-open', this.isDropdownOpen)
     this.dropdownEl.classList.toggle('dropdown-close', !this.isDropdownOpen)
@@ -175,23 +181,17 @@ export class SelectInput implements FormComponentInterface {
   
   closeDropdown () {
     this.isDropdownOpen = false
-    this.hoverOption = null
+    this.hoverOption = null;
+    this.focused = false;
   }
-  
-  
   
   render() {
     return (
       <Host class="wab-form-control">
-        <slot name="label">
-          {this.label && (
-            <label part="label" htmlFor={this.id}>
-              {this.label}
-            </label>
-          )}
-        </slot>
+        {this.labelPosition === 'top' &&
+            <WabLabel focused={this.focused} hasValue={!!this.value} id={this.id} label={this.label}/>}
         
-        <div part="input-wrapper" id={this.id} tabindex="0"
+        <div part={partName('input-wrapper', this.focused, !!this.value)} id={this.id} tabindex="0"
              onFocusin={(e) => this.toggleFocus(e, true)}
              onFocusout={(e) => this.toggleFocus(e, false)}
              onKeyUp={e => this.onKeyUp(e)}
@@ -219,6 +219,9 @@ export class SelectInput implements FormComponentInterface {
             ))}
           </ul>
         </div>
+        
+        {this.labelPosition === 'bottom' &&
+            <WabLabel focused={this.focused} hasValue={!!this.value} id={this.id} label={this.label}/>}
         
         <slot name="details">{this.details && <div part="details">{this.details}</div>}</slot>
         

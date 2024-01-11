@@ -474,6 +474,22 @@ export class FormBuilder implements ComponentInterface {
     }
     
     // console.log('getRightComponent', field)
+    const slotChilds = Array.from(this.el.querySelectorAll('[slot]'))
+      .filter(el => {
+        const parts = el.slot.split(':')
+        
+        if (parts.length === 1) {
+          return false
+        }
+        
+        return parts[0] === field.name
+      })
+      .map(el => {
+        const parts = el.slot.split(':')
+        const slotName = parts[1]
+        
+        return <div slot={slotName} innerHTML={el.innerHTML}></div>
+      })
     
     switch (field.type) {
       case 'text':
@@ -485,7 +501,7 @@ export class FormBuilder implements ComponentInterface {
                           {...props}
                           value={this.formData[field.name]}
                           onKeyUp={e => e.key === 'Enter' && this.formEl.requestSubmit()}
-          />
+          >{slotChilds}</wab-text-input>
         );
       
       case 'checkbox':
@@ -493,7 +509,7 @@ export class FormBuilder implements ComponentInterface {
           <wab-checkbox-input {...field}
                               {...props}
                               checked={this.formData[field.name]}
-          ></wab-checkbox-input>
+          >{slotChilds}</wab-checkbox-input>
         )
       
       case 'select':
@@ -501,7 +517,7 @@ export class FormBuilder implements ComponentInterface {
           <wab-select-input {...field}
                             {...props}
                             value={this.formData[field.name]}
-          />
+          >{slotChilds}</wab-select-input>
         )
       
       default:

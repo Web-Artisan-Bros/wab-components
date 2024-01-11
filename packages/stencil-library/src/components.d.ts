@@ -43,6 +43,7 @@ export namespace Components {
         "errors": string;
         "initialValue": any;
         "label": string;
+        "labelPosition": 'top' | 'bottom';
         "multiple": boolean;
         "name": string;
         "options": { label: string, value: string }[];
@@ -215,6 +216,7 @@ declare namespace LocalJSX {
         "errors"?: string;
         "initialValue"?: any;
         "label"?: string;
+        "labelPosition"?: 'top' | 'bottom';
         "multiple"?: boolean;
         "name": string;
         /**

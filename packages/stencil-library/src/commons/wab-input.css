@@ -15,7 +15,7 @@
         }
     }
     
-    [part="label"] {
+    [part^="label"] {
         display: block;
     }
     
@@ -27,7 +27,7 @@
         background-color: inherit;
     }
     
-    [part="details"] {
+    [part^="details"] {
         font-size: .75rem;
     }
     

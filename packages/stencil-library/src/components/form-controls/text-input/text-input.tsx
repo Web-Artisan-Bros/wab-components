@@ -1,6 +1,7 @@
-import { Component, Event, EventEmitter, Host, Prop, h, State } from '@stencil/core'
-import { getComponentId } from '../../../utils/utils';
+import { Component, Event, EventEmitter, Host, Prop, h, State, Element } from '@stencil/core'
+import { getComponentId, partName } from '../../../utils/utils'
 import FormComponentInterface from '../../../interfaces/FormComponentInterface';
+import { Label as WabLabel } from '../partials/Label'
 
 @Component({
   tag: 'wab-text-input',
@@ -23,6 +24,8 @@ export class TextInput implements FormComponentInterface {
   
   @State() focused: boolean = false
   
+  @Element() el
+  
   @Event() valueChange: EventEmitter<string>;
   @Event() valueInput: EventEmitter<string>;
 
@@ -40,34 +43,32 @@ export class TextInput implements FormComponentInterface {
     }
   }
   
-  getLabelPart () {
-    const part = ['label']
-    
-    if (this.focused) {
-      part.push('focus-within')
-    }
-    
-    if (this.value) {
-      part.push('value-within')
-    }
-    
-    return part.join(' ')
-  }
   
   componentWillLoad() {
     // console.log(this.disabled);
+    this.el.querySelector('[part*=\'label\']')?.setAttribute('part', partName("label", this.focused, !!this.value))
   }
-
+  
+  componentDidUpdate () {
+    this.el.querySelector('[part*=\'label\']')?.setAttribute('part', partName("label", this.focused, !!this.value))
+    // Non è una buona idea applicare il part direttamente sullo slot
+    // altrimenti lo stile si applica in maniera sbagliata a tutto il contenuto
+    
+    // const parts = this.getLabelPart()
+    // this.slotRefs["label"].setAttribute("part", parts)
+    // console.log(parts)
+  }
+  
   render() {
+    if (this.details === '_static_text_') {
+      return <Host class="wab-form-control wab-form-control-static">
+        <div>{this.value}</div>
+      </Host>
+    }
+    
     return (
-      <Host class="wab-form-control">
-        {this.labelPosition === 'top' && <slot name="label">
-          {this.label && (
-            <label part={this.getLabelPart()} htmlFor={this.id}>
-              {this.label}
-            </label>
-          )}
-        </slot>}
+      <Host class="wab-form-control" name={this.name}>
+        {this.labelPosition === 'top' && <WabLabel focused={this.focused} hasValue={!!this.value} id={this.id} label={this.label}/>}
         
         {this.type !== 'textarea'
           ?
@@ -98,15 +99,9 @@ export class TextInput implements FormComponentInterface {
                     rows={this.rows}>{this.value}</textarea>
         }
         
-        {this.labelPosition === 'bottom' && <slot name="label">
-          {this.label && (
-            <label part={this.getLabelPart()} htmlFor={this.id}>
-              {this.label}
-            </label>
-          )}
-        </slot>}
-
-        <slot name="details">{this.details && <div part="details">{this.details}</div>}</slot>
+        {this.labelPosition === 'bottom' && <WabLabel focused={this.focused} hasValue={!!this.value} id={this.id} label={this.label}/>}
+        
+        <slot name="details">{this.details && <div part="details" innerHTML={this.details}></div>}</slot>
 
         <slot name="errors">{this.errors && <div part="errors">{this.errors}</div>}</slot>
       </Host>

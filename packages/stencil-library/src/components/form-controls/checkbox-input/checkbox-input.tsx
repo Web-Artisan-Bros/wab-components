@@ -48,7 +48,7 @@ export class CheckboxInput implements FormComponentInterface {
     return (
       <Host class="wab-form-control">
         <label part="label" >
-          {this.labelPosition === 'left' && <span part='labelText'>{this.label}</span>}
+          {this.labelPosition === 'left' && <span part='labelText' innerHTML={this.label}></span>}
           
           <input part="input"
                  type="checkbox"
@@ -63,7 +63,7 @@ export class CheckboxInput implements FormComponentInterface {
           
           {this.useNative ? null : (<span part="customInput"><span part="customInputCheckmark"></span></span>)}
           
-          {this.labelPosition === 'right' && <span part='labelText'>{this.label}</span>}
+          {this.labelPosition === 'right' && <span part='labelText' innerHTML={this.label}></span>}
         </label>
         
         <slot name='details'>{this.details && <div part='details'>{this.details}</div>}</slot>
